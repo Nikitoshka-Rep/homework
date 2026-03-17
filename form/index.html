@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Form</title>
+    </head>
+    <body>
+        <form class="form">
+            <fieldset class="form-group">
+                <legend class="form-legend">Ваши личные данные</legend>
+                <label class="form-label">
+                    Ваше имя
+                    <input
+                        class="form-input"
+                        type="text"
+                        placeholder="Имя"
+                        name="name"
+                        required
+                    />
+                </label>
+                <label class="form-label">
+                    Ваш возраст
+                    <input
+                        class="form-input"
+                        type="number"
+                        placeholder="Возраст"
+                        name="age"
+                        required
+                    />
+                </label>
+                <label class="form-label">
+                    Ваш номер телефона
+                    <input
+                        class="form-input"
+                        type="tel"
+                        placeholder="Номер телефона"
+                        name="tel"
+                        required
+                    />
+                </label>
+                <label class="form-label">
+                    Ваша почта
+                    <input
+                        class="form-input"
+                        type="email"
+                        placeholder="Почта"
+                        name="email"
+                        required
+                    />
+                </label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend>Сообщение</legend>
+                <label class="form-label">
+                    <textarea
+                        class="form-textarea"
+                        placeholder="Ваше сообщение"
+                        name="massage"
+                    ></textarea>
+                </label>
+
+                <label>
+                    <input
+                        class="input-checkbox"
+                        type="checkbox"
+                        name="agreement"
+                        value="agreement"
+                        required
+                    />
+                    Я принимаю правила
+                </label>
+            </fieldset>
+            <button class="button">Отправить</button>
+        </form>
+    </body>
+</html>
