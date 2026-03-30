@@ -2,16 +2,6 @@
     padding-bottom: 120px;
 }
 
-.article-title {
-    font-family: Oswald;
-    font-weight: 600;
-    max-width: 596px;
-    line-height: 1.15;
-    text-transform: uppercase;
-    color: #2c332f;
-    margin-bottom: 40px;
-}
-
 .article-title-large {
     font-size: 48px;
 }
