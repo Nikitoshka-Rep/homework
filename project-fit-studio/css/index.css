@@ -2,19 +2,15 @@
     position: relative;
     padding-top: 80px;
 }
-.hero::after {
-    content: "";
-    position: absolute;
+.hero::before {
     bottom: 106px;
-    z-index: -1;
     width: 100%;
-    height: 48px;
-    background: url("../images/decor-large-icon.svg") repeat-x;
 }
 
 .hero-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
     gap: 28px;
 }
 
@@ -33,6 +29,10 @@
     color: #3596ed;
 }
 
+.hero-info{
+    max-width: 492px;
+}
+
 .hero-info .text {
     max-width: 440px;
     margin-bottom: 140px;
@@ -40,6 +40,8 @@
 
 .hero-images {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -47,7 +49,9 @@
     position: absolute;
     top: 40px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     border: 1px solid #535755;
     padding: 22px;
     width: 100%;
@@ -55,17 +59,31 @@
     text-align: center;
     background-color: rgb(255, 255, 255, 0.9);
 }
+
+.news{
+    /* display: none; */
+}
+
 .news-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
     gap: 28px;
 }
 
 .news-article {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border: 1px solid #d3cbd9;
     width: 284px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
     background-color: #fff;
     overflow: hidden;
 }
@@ -90,8 +108,12 @@
 }
 
 .news-link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 8px;
     font-weight: 400;
     font-size: 16px;
@@ -101,17 +123,23 @@
 
 .news-link::after {
     content: "";
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 22px;
     height: 9px;
     background-image: url("../images/arrow-icon.svg");
     background-repeat: no-repeat;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
     transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 
-
 .news-link:hover::after{
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+            transform: translateX(5px);
 }
 
 .faq{
@@ -119,17 +147,16 @@
 }
 
 .faq::before{
-    content: "";
-    position: absolute;
     top: 215px;
-    z-index: -1;
-    width: calc(50% - 250px);
-    height: 48px;
-    background: url("../images/decor-large-icon.svg") repeat-x;
 }
 
 .faq-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 28px;
 }
 
@@ -143,14 +170,30 @@ details > p {
 }
 
 details[open] summary::after{
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+details:last-child{
+    margin-bottom: 0;
+}
+
+summary::-webkit-details-marker{
+    display: none;
 }
 
 summary{
     padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 5px;
     cursor: pointer;
 }
@@ -158,8 +201,116 @@ summary{
 summary::after{
     content: "";
     display: inline-block;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 17px;
     height: 22px;
     background: url("../images/arrow-down-icon.svg") no-repeat center / cover;
+    -webkit-transition: .2s;
     transition: .2s;
+}
+
+
+@media(width <= 1440px) {
+    .hero-images img{
+        width: 50%;
+    }
+}
+
+@media(width <= 992px){
+    .hero::after{
+        display: none;
+    }
+    .hero-container{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .hero-info{
+        text-align: center;
+
+        max-width: 450px;
+    }
+
+    .hero h1{
+        font-size: 52px;
+        margin-bottom: 30px;
+    }
+
+    .hero-info .text{
+        max-width: inherit;
+        margin-bottom: 40px;
+    }
+
+    .news-container{
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 20px;
+    }
+
+    .news-article{
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+        max-width: 350px;
+    }
+
+    .news-article img{
+        width: 100%;
+    }
+
+    .faq-container{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .faq::before{
+        display: none;
+    }
+}
+
+@media(width <= 768px){
+    .hero{
+        padding-top: 60px;
+    }
+
+    .hero-info{
+        max-width: 410px;
+    }
+
+    .hero h1{
+        font-size: 50px;
+    }
+
+    .news-article{
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        max-width: 400px;
+    }
+
+    
+}
+
+@media(width <= 576px){
+    .hero h1{
+        font-size: 42px;
+    }
+
+    .hero-choose{
+        padding: 10px;
+        font-size: 14px;
+        max-width: 125px;
+    }
 }
