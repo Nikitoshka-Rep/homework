@@ -20,18 +20,24 @@
     <body>
         <header class="header">
             <div class="container">
-                <div class="header-inner">
-                    <a href="/">
+                <div class="header__inner">
+                    <a class="header__logo" href="/">
                         <img
+                            class="header__logo-img"
                             src="./images/logo-icon.svg"
                             width="84"
                             height="45"
                             alt="Логотип Fit Studio"
                         />
                     </a>
-                    <div class="header-phone text-sub">
-                        <p>Первое посещение бесплатно</p>
-                        <a href="tel:+79282822882" target="_blank"
+                    <div class="header__phone text-sub">
+                        <p class="header__phone-text">
+                            Первое посещение бесплатно
+                        </p>
+                        <a
+                            class="header__phone-link"
+                            href="tel:+79282822882"
+                            target="_blank"
                             >+7 (928) 282-28-82</a
                         >
                     </div>
@@ -40,14 +46,14 @@
         </header>
 
         <article class="article">
-            <section class="article-mb-1">
+            <section class="article__filial article-mb-1">
                 <div class="container article-mb-1">
-                    <h1 class="title-large">
+                    <h1 class="article__filial-title title-large">
                         Открытие нового филиала в центре города!
                     </h1>
-                    <p class="article-text">
+                    <p class="article__text">
                         Фитнес клуб «Fit.Studio» рад сообщить об открытии нового
-                        филиала в центре города. Новый клуб расположен в <a
+                        филиала в центре города. Новый клуб расположен в <a class="article__text-link"
                             href="#"
                             >удобном месте</a
                         >, рядом с остановками общественного транспорта,
@@ -56,7 +62,7 @@
                         тренажёрами, зонами для групповых занятий и отдыха,
                         а также сауной и бассейном.
                     </p>
-                    <p class="article-text">
+                    <p class="aarticle__text">
                         Кроме того, в "FitLife" работают опытные тренеры,
                         которые помогут составить индивидуальную программу
                         тренировок и диеты для достижения желаемых результатов.
@@ -67,10 +73,10 @@
                 </div>
                 <div class="container">
                     <div
-                        class="article-decore-wrapper article-decore-wrapper-1 decor"
+                        class="article__decore-wrapper article__decore-wrapper--1 decor"
                     >
                         <img
-                            class="article-img article-mb-1"
+                            class="article__decore-wrapper-img article-mb-1"
                             src="./images/gym-img.jpg"
                             width="1220"
                             height="512"
@@ -80,9 +86,9 @@
                 </div>
             </section>
 
-            <section class="article-mb-1">
+            <section class="article__classes article-mb-1">
                 <div class="container">
-                    <h2 class="title-large article-title-medium">
+                    <h2 class="article-title-medium title-large">
                         Групповые занятия
                     </h2>
 
@@ -93,28 +99,28 @@
                         для тренировок.
                     </p>
 
-                    <ul class="article-list article-text">
-                        <li class="article-item">Йога</li>
-                        <li class="article-item">Пилатес</li>
-                        <li class="article-item">Аэробика</li>
-                        <li class="article-item">Танцы</li>
-                        <li class="article-item">Силовые тренировки</li>
+                    <ul class="article__classes-list article-text">
+                        <li class="article__classes-item">Йога</li>
+                        <li class="article__classes-item">Пилатес</li>
+                        <li class="article__classes-item">Аэробика</li>
+                        <li class="article__classes-item">Танцы</li>
+                        <li class="article__classes-item">Силовые тренировки</li>
                     </ul>
                 </div>
             </section>
 
-            <section class="">
+            <section class="article__review">
                 <div class="container">
-                    <h2 class="title-large article-title-medium">
+                    <h2 class="article__review-title title-large article-title-medium">
                         Обзор нового филиала
                     </h2>
                 </div>
                 <div class="container">
                     <div
-                        class="article-decore-wrapper article-decore-wrapper-2 article-mb-2 decor"
+                        class="article__decore-wrapper article__decore-wrapper--bottom article-mb-2 decor"
                     >
-                        <button class="article-play-button">
-                            <img
+                        <button class="article__play-button">
+                            <img class="article__play-button-img"
                                 src="./images/play-icon.svg"
                                 width="24"
                                 height="24"
@@ -122,7 +128,7 @@
                             />
                         </button>
                         <img
-                            class="article-img"
+                            class="article__review-img"
                             src="./images/gym-img.jpg"
                             width="1220"
                             height="512"
@@ -139,11 +145,12 @@
                 </div>
             </section>
         </article>
+
         <footer class="footer">
-            <div class="footer-top">
+            <div class="footer__top">
                 <div class="container">
-                    <a class="footer-logo" href="#">
-                        <img
+                    <a class="footer__logo" href="#">
+                        <img class="footer__logo-img"
                             src="./images/logo-icon.svg"
                             width="84"
                             height="45"
@@ -151,31 +158,33 @@
                         />
                     </a>
 
-                    <nav class="footer-menu">
-                        <ul class="footer-list">
-                            <li class="footer-item">
-                                <a href="#" class="footer-link">Клубы</a>
+                    <nav class="footer__menu">
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="/article.html" class="footer__list-link"
+                                    >Клубы</a
+                                >
                             </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-link">Тренировки</a>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Тренировки</a>
                             </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-link">Абонементы</a>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Абонементы</a>
                             </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-link"
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link"
                                     >Программа лояльности</a
                                 >
                             </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-link">Контакты</a>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <div class="container">
-                <p class="footer-copyright">
+                <p class="footer__copyright">
                     &copy Copyright. Все права защищены
                 </p>
             </div>

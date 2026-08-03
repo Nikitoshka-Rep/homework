@@ -7,14 +7,24 @@
     width: 100%;
 }
 
-.hero-container {
+.hero__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 28px;
 }
 
-.hero h1 {
+.hero__info {
+    flex-shrink: 0;
+    max-width: 492px;
+}
+
+.hero__info .text {
+    max-width: 440px;
+    margin-bottom: 140px;
+}
+
+.hero__title {
     margin-bottom: 40px;
     font-family: Oswald, sans-serif;
     font-weight: 600;
@@ -24,34 +34,25 @@
     color: #2c332f;
 }
 
-.hero h1 strong {
+.hero__title-accent {
     font-weight: 600;
     color: #3596ed;
 }
 
-.hero-info{
-    max-width: 492px;
-}
-
-.hero-info .text {
-    max-width: 440px;
-    margin-bottom: 140px;
-}
-
-.hero-images {
+.hero__images {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.hero-choose {
+.hero__choose {
     position: absolute;
     top: 40px;
     left: 50%;
     -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
     border: 1px solid #535755;
     padding: 22px;
     width: 100%;
@@ -60,60 +61,60 @@
     background-color: rgb(255, 255, 255, 0.9);
 }
 
-.news{
+.news {
     /* display: none; */
 }
 
-.news-container{
+.news__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 28px;
 }
 
-.news-article {
+.news__article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     border: 1px solid #d3cbd9;
     width: 284px;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 25%;
-            flex: 1 1 25%;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
     background-color: #fff;
     overflow: hidden;
 }
 
-.news-article img {
+.news__header-img {
     display: block;
 }
 
-.news-date {
+.news__date {
     display: inline-block;
     margin-bottom: 8px;
 }
 
-.news-info {
+.news__info {
     padding: 20px 20px 0;
     margin-bottom: 12px;
 }
 
-.news-article footer {
+.news__footer {
     margin-top: auto;
     padding: 0 20px 20px;
 }
 
-.news-link {
+.news__link {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 8px;
     font-weight: 400;
     font-size: 16px;
@@ -121,7 +122,7 @@
     color: #3596ed;
 }
 
-.news-link::after {
+.news__link::after {
     content: "";
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -130,185 +131,184 @@
     height: 9px;
     background-image: url("../images/arrow-icon.svg");
     background-repeat: no-repeat;
-    -webkit-transition: -webkit-transform .2s;
-    transition: -webkit-transform .2s;
-    transition: transform .2s;
-    transition: transform .2s, -webkit-transform .2s;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition:
+        transform 0.2s,
+        -webkit-transform 0.2s;
 }
 
-.news-link:hover::after{
+.news__link:hover::after {
     -webkit-transform: translateX(5px);
-        -ms-transform: translateX(5px);
-            transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
 }
 
-.faq{
+.faq {
     position: relative;
 }
 
-.faq::before{
+.faq::before {
     top: 215px;
 }
 
-.faq-container{
+.faq__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     gap: 28px;
 }
 
-details{
+.faq__details {
     margin-bottom: 20px;
     border-block: 1px solid #d3cbd9;
 }
 
-details > p {
-    padding:  0 20px 20px;
+.faq__details-text {
+    padding: 0 20px 20px;
 }
 
-details[open] summary::after{
+.faq__details[open] summary::after {
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
-details:last-child{
+.faq__details:last-child {
     margin-bottom: 0;
 }
 
-summary::-webkit-details-marker{
+.faq__details-summary::-webkit-details-marker {
     display: none;
 }
 
-summary{
+.faq__details-summary {
     padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     gap: 5px;
     cursor: pointer;
 }
 
-summary::after{
+.faq__details-summary::after {
     content: "";
     display: inline-block;
     -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
     width: 17px;
     height: 22px;
     background: url("../images/arrow-down-icon.svg") no-repeat center / cover;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
 }
 
-
-@media(width <= 1440px) {
-    .hero-images img{
+@media (width <= 1440px) {
+    .hero__images img {
         width: 50%;
     }
 }
 
-@media(width <= 992px){
-    .hero::after{
+@media (width <= 992px) {
+    .hero::after {
         display: none;
     }
-    .hero-container{
+    .hero__container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
 
-    .hero-info{
+    .hero__info {
         text-align: center;
 
         max-width: 450px;
     }
 
-    .hero h1{
+    .hero__title {
         font-size: 52px;
         margin-bottom: 30px;
     }
 
-    .hero-info .text{
+    .hero__info .text {
         max-width: inherit;
         margin-bottom: 40px;
     }
 
-    .news-container{
+    .news__container {
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         gap: 20px;
     }
 
-    .news-article{
+    .news__article {
         -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
+        flex-basis: 50%;
         max-width: 350px;
     }
 
-    .news-article img{
+    .news__header-img {
         width: 100%;
     }
 
-    .faq-container{
+    .faq__container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
 
-    .faq::before{
+    .faq::before {
         display: none;
     }
 }
 
-@media(width <= 768px){
-    .hero{
+@media (width <= 768px) {
+    .hero {
         padding-top: 60px;
     }
 
-    .hero-info{
+    .hero__info {
         max-width: 410px;
     }
 
-    .hero h1{
+    .hero__title {
         font-size: 50px;
     }
 
-    .news-article{
+    .news__article {
         -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
+        flex-basis: 100%;
         max-width: 400px;
     }
-
-    
 }
 
-@media(width <= 576px){
-    .hero h1{
+@media (width <= 576px) {
+    .hero__title {
         font-size: 42px;
     }
 
-    .hero-choose{
+    .hero__choose {
         padding: 10px;
         font-size: 14px;
         max-width: 125px;
