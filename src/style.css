@@ -155,12 +155,16 @@ body.overflow {
 .content__list-item  {
     cursor: pointer;
     padding: 12px 18px;
-    background-color: #fff;
+    background-color: #a2ef49;
     border-radius: 10px;
     border: 1px solid #DADEC9;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+}
+
+.content__list-item--unverified{
+    background-color: #fff;
 }
 
 .content__list-item:hover,.content__list-diplom:hover {
