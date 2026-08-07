@@ -19,3 +19,7 @@ button:focus-visible{
   outline: solid 1px var(--accent-color);
   outline-offset: 2px;
 }
+
+.main{
+  
+}
