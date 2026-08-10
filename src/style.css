@@ -127,7 +127,8 @@ body.overflow {
 
 .sidebar__button.active , .sidebar__button:hover {
     width: 100%;
-    background-color: #DAF765;
+    background: -webkit-linear-gradient(46deg, #daf765,#bbff00,#abf271); 
+    background: linear-gradient(46deg, #daf765,#bbff00,#abf271);/                                           
 }
 
 
