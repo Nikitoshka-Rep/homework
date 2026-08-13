@@ -1,6 +1,6 @@
 export const productSlider = () => {
     new Swiper(".product__slider", {
-        slidesPrevVie: "auto",
+        slidesPerView: "auto",
         centeredSlides: true,
         loop: true,
         mousewheel: {
