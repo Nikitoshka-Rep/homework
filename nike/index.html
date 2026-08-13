@@ -97,11 +97,11 @@
                             <svg width="24" height="24">
                                 <use
                                     class="burger__icon-menu"
-                                    href="./icons/sprite.svg#menu-burger"
+                                    href="./icons/sprite.svg#burger"
                                 ></use>
                                 <use
                                     class="burger__icon-cross"
-                                    href="./icons/sprite.svg#menu-cross"
+                                    href="./icons/sprite.svg#cross"
                                 ></use>
                             </svg>
                         </button>
@@ -356,13 +356,19 @@
                                 </div>
 
                                 <div class="product__buy-wrapper">
-                                    <button class="product__buy-button">
+                                    <button
+                                        class="product__buy-button"
+                                        data-modal-button="buy"
+                                        data-modal-speed="500"
+                                    >
                                         Купить в 1 клик
                                     </button>
                                     <button
                                         class="product__cart-button"
                                         aria-label="Добавить корзину"
                                         title="Добавить корзину"
+                                        data-modal-button="cart"
+                                        data-modal-speed="300"
                                     >
                                         <img
                                             src="./icons/cart-icon.svg"
@@ -553,7 +559,10 @@
                                 Комфорт и поддержка
                             </h3>
                             <p class="characteristics__card-description">
-                                Модель предлагает высокий уровень комфорта благодаря качественной амортизации и поддержке стопы, что делает их идеальными для длительного ношения
+                                Модель предлагает высокий уровень комфорта
+                                благодаря качественной амортизации и поддержке
+                                стопы, что делает их идеальными для длительного
+                                ношения
                             </p>
                         </article>
                         <article class="characteristics__card">
@@ -570,7 +579,10 @@
                                 Современные материалы
                             </h3>
                             <p class="characteristics__card-description">
-                                Nike Air Mag изготовлены из высококачественных синтетических материалов, которые обеспечивают долговечность, устойчивость к износу и легкость в уходе
+                                Nike Air Mag изготовлены из высококачественных
+                                синтетических материалов, которые обеспечивают
+                                долговечность, устойчивость к износу и легкость
+                                в уходе
                             </p>
                         </article>
                         <article class="characteristics__card">
@@ -587,7 +599,9 @@
                                 Хорошая сцепляемость
                             </h3>
                             <p class="characteristics__card-description">
-                                Подошва кроссовок обладает отличным сцеплением с различными поверхностями, что обеспечивает надежность при ходьбе и беге
+                                Подошва кроссовок обладает отличным сцеплением с
+                                различными поверхностями, что обеспечивает
+                                надежность при ходьбе и беге
                             </p>
                         </article>
                         <article class="characteristics__card">
@@ -604,7 +618,10 @@
                                 Культовый статус
                             </h3>
                             <p class="characteristics__card-description">
-                                Nike Air Mag стали культовыми благодаря своему появлению в кино "Назад в будущее 2", что подчеркивает их историческую и культурную значимость
+                                Nike Air Mag стали культовыми благодаря своему
+                                появлению в кино "Назад в будущее 2", что
+                                подчеркивает их историческую и культурную
+                                значимость
                             </p>
                         </article>
                         <article class="characteristics__card">
@@ -621,148 +638,468 @@
                                 Яркое дополнение к любому образу
                             </h3>
                             <p class="characteristics__card-description">
-                                Кроссовки легко вписываются в различные стили одежды, позволяя создавать уникальные образы. Они могут дополнить как спортивный, так и повседневный стиль
+                                Кроссовки легко вписываются в различные стили
+                                одежды, позволяя создавать уникальные образы.
+                                Они могут дополнить как спортивный, так и
+                                повседневный стиль
                             </p>
-                        </article>             
+                        </article>
+                    </div>
                 </div>
             </section>
             <section id="top-models" class="top-models section">
                 <div class="container">
                     <h2 class="top-models__title title-md section-title">
-                        Другие <span class="top-models__title-accent">Топ</span> модели от Nike
+                        Другие
+                        <span class="top-models__title-accent">Топ</span> модели
+                        от Nike
                     </h2>
-                        <div class="top-models__products">
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Nike Air Yeezy 2 “Red October”</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-1.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-1.png" alt="Кросовки Nike Air Yeezy 2 “Red October”" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Wings x Air Jordan 1</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-2.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-2.png" alt="Кросовки Wings x Air Jordan 1'" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Nike Dunk SB Low Yellow Lobster</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-3.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-3.png" alt="Кросовки Nike Dunk SB Low Yellow Lobster" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">DJ Khaled x Air Jordan 3 “Grateful”</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-4.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-4.png" alt="Кросовки DJ Khaled x Air Jordan 3 “Grateful”" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Nike SB Dunk Low Freddy Krueger</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-5.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-5.png" alt="Кросовки Nike SB Dunk Low Freddy Krueger" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Air Jordan 10 x OVO</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-6.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-6.png" alt="Кросовки Air Jordan 10 x OVO" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Air Jordan 12 Flu-Game</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-7.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-7.png" alt="Кросовки Air Jordan 12 Flu-Game" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Air Jordan 1 “Shattered Backboard” 1985</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-8.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-8.png" alt="Кросовки Air Jordan 1 “Shattered Backboard” 1985" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-                            <article class="top-models__product">
-                                <a href="#" class="top-models__product-link">
-                                    <div class="top-models__product-content">
-                                        <h3 class="top-models__product-title title-xs">Kanye West Nike Air Yeezy 1 “Prototype”</h3>
-                                        <svg width="24" height="24">
-                                            <use class="top-models__product-icon" href="./icons/main-sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                    <picture class="top-models__product-img-wrapper">
-                                        <source srcset="./images/top-models/top-model-9.webp" type="image/webp">
-                                        <img class="top-models__product-img" src="./images/top-models/top-model-9.png" alt="Кросовки Kanye West Nike Air Yeezy 1 “Prototype”" width="190" height="143" loading="lazy">
-                                    </picture>
-                                </a>
-                            </article>
-
-                        </div>
-                    
+                    <div class="top-models__products">
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Nike Air Yeezy 2 “Red October”
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-1.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-1.png"
+                                        alt="Кросовки Nike Air Yeezy 2 “Red October”"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Wings x Air Jordan 1
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-2.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-2.png"
+                                        alt="Кросовки Wings x Air Jordan 1'"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Nike Dunk SB Low Yellow Lobster
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-3.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-3.png"
+                                        alt="Кросовки Nike Dunk SB Low Yellow Lobster"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        DJ Khaled x Air Jordan 3 “Grateful”
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-4.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-4.png"
+                                        alt="Кросовки DJ Khaled x Air Jordan 3 “Grateful”"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Nike SB Dunk Low Freddy Krueger
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-5.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-5.png"
+                                        alt="Кросовки Nike SB Dunk Low Freddy Krueger"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Air Jordan 10 x OVO
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-6.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-6.png"
+                                        alt="Кросовки Air Jordan 10 x OVO"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Air Jordan 12 Flu-Game
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-7.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-7.png"
+                                        alt="Кросовки Air Jordan 12 Flu-Game"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Air Jordan 1 “Shattered Backboard” 1985
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-8.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-8.png"
+                                        alt="Кросовки Air Jordan 1 “Shattered Backboard” 1985"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="top-models__product">
+                            <a href="#" class="top-models__product-link">
+                                <div class="top-models__product-content">
+                                    <h3
+                                        class="top-models__product-title title-xs"
+                                    >
+                                        Kanye West Nike Air Yeezy 1 “Prototype”
+                                    </h3>
+                                    <svg width="24" height="24">
+                                        <use
+                                            class="top-models__product-icon"
+                                            href="./icons/main-sprite.svg#arrow-right"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <picture
+                                    class="top-models__product-img-wrapper"
+                                >
+                                    <source
+                                        srcset="
+                                            ./images/top-models/top-model-9.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="top-models__product-img"
+                                        src="./images/top-models/top-model-9.png"
+                                        alt="Кросовки Kanye West Nike Air Yeezy 1 “Prototype”"
+                                        width="190"
+                                        height="143"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </a>
+                        </article>
+                    </div>
                 </div>
             </section>
         </main>
+        <footer class="footer">
+            <div class="container footer__container">
+                <a class="logo footer__logo" href="#">
+                    <img
+                        class="logo__img"
+                        src="./icons/logo-icon.svg"
+                        alt="Логотип Nike"
+                        width="50"
+                        height="20"
+                    />
+                </a>
+                <nav class="menu footer__menu" aria-label="Главное меню">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#air-mag" lang="en"
+                                >Air Mag</a
+                            >
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#sizes">Размеры</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#characteristics">
+                                Характеристики</a
+                            >
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#top-models"
+                                >Другие ТОП модели</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <a class="footer__phone" href="tel:79292992929"
+                    >+7 (929) 299-29-29</a
+                >
+            </div>
+        </footer>
+        <div class="modal">
+            <div class="modal__window modal-buy" data-modal-window="buy">
+                <button
+                    class="modal__close"
+                    aria-label="Закрыть"
+                    title="Закрыть"
+                    data-modal-close
+                >
+                    <svg width="24" height="24">
+                        <use
+                            class="modal__close-icon"
+                            href="./icons/sprite.svg#cross"
+                        ></use>
+                    </svg>
+                </button>
+                <div class="modal__content modal__bue-content">
+                    <div class="modal__buy-title title-sm">Заявка на заказ</div>
+                    <form class="modal__buy-form">
+                        <label class="modal__buy-lable">
+                            <input
+                                class="modal__buy-input"
+                                type="text"
+                                placeholder="Ваше имя"
+                                name="name"
+                                required
+                            />
+                        </label>
+                        <label class="modal__buy-lable">
+                            <input
+                                class="modal__buy-input"
+                                type="tel"
+                                placeholder="Номер телефона"
+                                name="phone"
+                                required
+                            />
+                        </label>
+                        <label class="modal__buy-lable">
+                            <input
+                                class="modal__buy-input"
+                                type="email"
+                                placeholder="E-mail"
+                                name="email"
+                                required
+                            />
+                        </label>
+                        <button class="modal__buy-submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal__window modal-buy" data-modal-window="cart">
+                <button
+                    class="modal__close"
+                    aria-label="Закрыть"
+                    title="Закрыть"
+                    data-modal-close
+                >
+                    <svg width="24" height="24">
+                        <use
+                            class="modal__close-icon"
+                            href="./icons/sprite.svg#cross"
+                        ></use>
+                    </svg>
+                </button>
+                <div class="modal__content modal__bue-content">
+                    <div class="modal__buy-title title-sm">Заявка на заказ</div>
+                    <form class="modal__buy-form">
+                        <label class="modal__buy-lable">
+                            <input
+                                class="modal__buy-input"
+                                type="text"
+                                placeholder="Ваше имя"
+                                name="name"
+                                required
+                            />
+                        </label>
+                        <label class="modal__buy-lable">
+                            <input
+                                class="modal__buy-input"
+                                type="tel"
+                                placeholder="Номер телефона"
+                                name="phone"
+                                required
+                            />
+                        </label>
+                        <button class="modal__buy-submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -4,11 +4,16 @@
     color: var(--main-color);
     scroll-behavior: smooth;
     scroll-padding-top: 98px;
+    scrollbar-gutter: stable;
 }
 
 .page__body {
     min-width: 375px;
     background-color: var(--bg-color);
+}
+
+.page__body--no-scroll {
+  overflow-y: hidden;
 }
 
 .container {
@@ -17,11 +22,13 @@
 }
 
 img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus {
     outline: solid 1px var(--accent-color);
     outline-offset: 2px;
 }
@@ -77,4 +84,3 @@ button:focus-visible {
         margin-bottom: 30px;
     }
 }
-
