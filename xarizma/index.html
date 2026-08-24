@@ -1,0 +1,708 @@
+<!doctype html>
+<html class="page" lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./icons/favicon-icon.svg"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="./css/index.css" />
+        <title>Караоке-клуб</title>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+        <script src="./js/index.js" type="module"></script>
+    </head>
+    <body class="page__body">
+        <header class="header">
+            <div class="container header__container">
+                <a class="header__logo logo" href="#">
+                    <img
+                        src="./icons/logo-icon.svg"
+                        alt="Логотип караоке-клуба"
+                        width="293"
+                        height="67"
+                    />
+                </a>
+
+                <nav class="header__menu menu">
+                    <div class="menu__contacts">
+                        <a
+                            class="menu__contacts-phone"
+                            href="tel:+380979709090"
+                            title="Позвонить по номеру"
+                        >
+                            <div class="menu__contacts-icon-wrapper">
+                                <svg width="29" height="29">
+                                    <use
+                                        class="menu__contacts-icon"
+                                        href="./icons/sprite.svg#phone"
+                                    ></use>
+                                </svg>
+                            </div>
+
+                            +38 (097) 970-90-90
+                        </a>
+                        <a
+                            class="menu__contacts-address"
+                            href="https://yandex.ru/maps/-/CTgUnIlV"
+                            title="Показать адресс"
+                            target="_blank"
+                        >
+                            <div class="menu__contacts-icon-wrapper">
+                                <svg width="34" height="34">
+                                    <use
+                                        class="menu__contacts-icon menu__contacts-icon--reverse"
+                                        href="./icons/sprite.svg#pin"
+                                    ></use>
+                                </svg>
+                            </div>
+                            м. Лубянка
+                        </a>
+                    </div>
+                    <div class="menu__nav">
+                        <a class="menu__nav-link" href="#halls">Наши залы</a>
+
+                        <button
+                            class="menu__nav-link menu__nav-link--accent"
+                            href="#reservation"
+                            data-modal-button="reservation"
+                            data-modal-speed="500"
+                        >
+                            Забронировать
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="header__menu-mobile menu__mobile">
+                    <a
+                        class="menu__contacts-address"
+                        href="https://yandex.ru/maps/-/CTgUnIlV"
+                        title="Показать адресс"
+                        target="_blank"
+                        aria-label="Показать адресс"
+                    >
+                        <div class="menu__contacts-icon-wrapper">
+                            <svg width="29" height="29">
+                                <use
+                                    class="menu__contacts-icon"
+                                    href="./icons/sprite.svg#pin"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <button
+                        class="menu__burger burger"
+                        aria-expanded="false"
+                        aria-label="Открыть меню"
+                        aria-controls="header__menu"
+                    >
+                        <img
+                            class="burger__icon-menu"
+                            src="./icons/burger-menu-icon.svg"
+                            alt="Открыть меню"
+                            width="29"
+                            height="12"
+                        />
+                        <img
+                            class="burger__icon-cross"
+                            src="./icons/x-cross-icon.svg"
+                            alt="Закрыть меню"
+                            width="22"
+                            height="22"
+                        />
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="hero dashed">
+                <div class="container hero__container">
+                    <div class="hero__bg">
+                        <img
+                            src="./image/harizmahall1-bg.png"
+                            width="1024"
+                            height="685"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="hero__underlay"></div>
+
+                    <div class="hero__content">
+                        <div class="hero__wrapper">
+                            <h1 class="hero__header-title">
+                                Арендуй Караоке-Зал до 10 человек
+                            </h1>
+                            <h2 class="hero__header-subtitle title">
+                                возьми алкоголь и еду с собой
+
+                                <a
+                                    class="hero__header-subtitle-link"
+                                    href="https://yandex.ru/maps/-/CTgUnIlV"
+                                    target="_blank"
+                                    >м. Лубянка</a
+                                >
+                            </h2>
+                            <ul class="hero__header-list">
+                                <li class="hero__header-item">
+                                    <img
+                                        class="hero__header-item-icon"
+                                        src="./icons/cheked-icon.svg"
+                                        width="50"
+                                        height="50px"
+                                        alt="иконка галочки"
+                                    />
+                                    Если хочешь попеть и оторваться
+                                </li>
+                                <li class="hero__header-item">
+                                    <img
+                                        class="hero__header-item-icon"
+                                        src="./icons/cheked-icon.svg"
+                                        width="50"
+                                        height="50px"
+                                        alt="иконка галочки"
+                                    />
+                                    Отдохнуть после работы
+                                </li>
+                                <li class="hero__header-item">
+                                    <img
+                                        class="hero__header-item-icon"
+                                        src="./icons/cheked-icon.svg"
+                                        width="50"
+                                        height="50px"
+                                        alt="иконка галочки"
+                                    />
+                                    Хорошо провести время
+                                </li>
+                            </ul>
+
+                            <div class="hero__header-controls">
+                                <button
+                                    class="hero__header-button button"
+                                    data-modal-button="reservation"
+                                    data-modal-speed="500"
+                                >
+                                    Забронировать онлайн
+                                </button>
+                                <p class="hero__header-text-rotate">
+                                    листайте вниз
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hero__right">
+                            <div class="hero__dancer">
+                                <img
+                                    class="hero__dancer-img"
+                                    src="./image/dancer-bg.png"
+                                    width="700"
+                                    height="1247"
+                                    alt="Девушка в караоке"
+                                />
+                            </div>
+
+                            <div class="hero__contact-us">
+                                <a href="#" class="hero__contact-us-link">
+                                    <svg width="35" height="35">
+                                        <use
+                                            class="hero__contact-us-icon"
+                                            href="./icons/sprite.svg#tg"
+                                        ></use>
+                                    </svg>
+                                </a>
+                                <p class="hero__contact-us-text">
+                                    Связаться с нами
+                                </p>
+                            </div>
+
+                            <div class="hero__tag">
+                                <img
+                                    class="hero__tag-img"
+                                    src="./image/tag.svg"
+                                    width="269"
+                                    height="273"
+                                    alt="Можно шуметь круглосуточно"
+                                />
+                                <div class="hero__tag-content">
+                                    <p class="hero__tag-text">можно шуметь</p>
+                                    <strong class="hero__tag-strong"
+                                        >круглосуточно</strong
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="hero__footer">
+                        <ul class="hero__advantages-list">
+                            <li class="hero__advantages-item">
+                                <svg
+                                    class="hero__advantages-item-icon"
+                                    width="70"
+                                    height="70"
+                                >
+                                    <use
+                                        href="./icons/hero-sprite.svg#microphone"
+                                    ></use>
+                                </svg>
+                                <span class="hero__advantages-item-line"></span>
+                                <p class="hero__advantages-item-desc">
+                                    Профессиональное караоке AST-50
+                                </p>
+                            </li>
+                            <li class="hero__advantages-item">
+                                <svg
+                                    class="hero__advantages-item-icon"
+                                    width="67"
+                                    height="67"
+                                >
+                                    <use
+                                        href="./icons/hero-sprite.svg#champagne"
+                                    ></use>
+                                </svg>
+                                <span class="hero__advantages-item-line"></span>
+                                <p class="hero__advantages-item-desc">
+                                    Без пробкового сбора
+                                </p>
+                            </li>
+                            <li class="hero__advantages-item">
+                                <svg
+                                    class="hero__advantages-item-icon"
+                                    width="68"
+                                    height="68"
+                                >
+                                    <use
+                                        href="./icons/hero-sprite.svg#deposit"
+                                    ></use>
+                                </svg>
+                                <span class="hero__advantages-item-line"></span>
+                                <p class="hero__advantages-item-desc">
+                                    Без депозита
+                                </p>
+                            </li>
+                            <li class="hero__advantages-item">
+                                <svg
+                                    class="hero__advantages-item-icon"
+                                    width="68"
+                                    height="68"
+                                >
+                                    <use
+                                        href="./icons/hero-sprite.svg#happy-birthday"
+                                    ></use>
+                                </svg>
+                                <span class="hero__advantages-item-line"></span>
+                                <p class="hero__advantages-item-desc">
+                                    Скидка в День Рождения
+                                </p>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+            </section>
+            <section class="halls">
+                <div class="container halls__container">
+                    <div class="halls__sidebar">
+                        <h2 class="halls__title title">Наши залы</h2>
+                        <h3 class="halls__subtitle subtitle">
+                            Ознакомтесь с атмосферой праздника
+                        </h3>
+
+                        <div class="halls__tabs"></div>
+                        <div class="halls__tabs-mobile"></div>
+
+                        <div class="halls__slider halls__slider--mobile">
+                            <div class="swiper halls__main-slider-mobile">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./image/halls/hall-1.jpg"
+                                            width="1407"
+                                            height="1009"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./image/halls/hall-1.jpg"
+                                            width="1407"
+                                            height="1009"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./image/halls/hall-1.jpg"
+                                            width="1407"
+                                            height="1009"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./image/halls/hall-1.jpg"
+                                            width="1407"
+                                            height="1009"
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="./image/halls/hall-1.jpg"
+                                            width="1407"
+                                            height="1009"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper halls__thumb-slider-mobile">
+                                <div class="swiper-wrapper">
+                                    <div
+                                        class="swiper-slide halls__thumb-slide"
+                                    >
+                                        <img
+                                            src="./image/halls/hall-2.jpg"
+                                            width="281"
+                                            height="169"
+                                        />
+                                        <img
+                                            class="halls__thumb-overlay-icon"
+                                            src="./icons/eye-icon.svg"
+                                            alt="посмотреть слайд"
+                                            width="50"
+                                            height="50"
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide halls__thumb-slide"
+                                    >
+                                        <img
+                                            src="./image/halls/hall-3.jpg"
+                                            width="281"
+                                            height="169"
+                                        />
+                                        <img
+                                            class="halls__thumb-overlay-icon"
+                                            src="./icons/eye-icon.svg"
+                                            alt="посмотреть слайд"
+                                            width="50"
+                                            height="50"
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide halls__thumb-slide"
+                                    >
+                                        <img
+                                            src="./image/halls/hall-4.jpg"
+                                            width="281"
+                                            height="169"
+                                        />
+                                        <img
+                                            class="halls__thumb-overlay-icon"
+                                            src="./icons/eye-icon.svg"
+                                            alt="посмотреть слайд"
+                                            width="50"
+                                            height="50"
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide halls__thumb-slide"
+                                    >
+                                        <img
+                                            src="./image/halls/hall-5.jpg"
+                                            width="281"
+                                            height="169"
+                                        />
+                                        <img
+                                            class="halls__thumb-overlay-icon"
+                                            src="./icons/eye-icon.svg"
+                                            alt="посмотреть слайд"
+                                            width="50"
+                                            height="50"
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide halls__thumb-slide"
+                                    >
+                                        <img
+                                            src="./image/halls/hall-6.jpg"
+                                            width="281"
+                                            height="169"
+                                        />
+                                        <img
+                                            class="halls__thumb-overlay-icon"
+                                            src="./icons/eye-icon.svg"
+                                            alt="посмотреть слайд"
+                                            width="50"
+                                            height="50"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="halls__characteristic">
+                            <li class="halls__characteristic-item">№1</li>
+                            <li class="halls__characteristic-item">40 м2</li>
+                            <li class="halls__characteristic-item">
+                                до 20-ти человек
+                            </li>
+                        </ul>
+
+                        <div
+                            class="halls__navigation navigation navigation--halls"
+                        >
+                            <button
+                                class="navigation-button navigation-button--prev navigation-button--desktop-visible"
+                                data-button-halls-slide-prev="desktop"
+                                aria-label="предыдущий слайд"
+                            >
+                                <svg
+                                    class="navigation-button__icon"
+                                    width="16"
+                                    height="20"
+                                >
+                                    <use href="./icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <button
+                                class="navigation-button navigation-button--mobile navigation-button--prev navigation-button--mobile-visible"
+                                data-button-halls-slide-prev="mobile"
+                                aria-label="предыдущий слайд"
+                            >
+                                <svg
+                                    class="navigation-button__icon"
+                                    width="16"
+                                    height="20"
+                                >
+                                    <use href="./icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+
+                            <div class="navigation__counter" data-navigation-counter="desktop">
+                                <span class="navigation__current">1</span>
+                                <span class="navigation__divider">из</span>
+                                <span class="navigation__total">17</span>
+                            </div>
+
+                            <div class="navigation__counter-mobile" data-navigation-counter="mobile">
+                                <span class="navigation__current">1</span>
+                                <span class="navigation__divider">из</span>
+                                <span class="navigation__total">17</span>
+                            </div>
+
+                            <button
+                                class="navigation-button navigation-button--mobile navigation-button--next navigation-button--mobile-visible"
+                                data-button-halls-slide-next="mobile"
+                                aria-label="следующий слайд"
+                            >
+                                <svg
+                                    class="navigation-button__icon"
+                                    width="16"
+                                    height="20"
+                                >
+                                    <use href="./icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+
+                            <button
+                                class="navigation-button navigation-button--next navigation-button--desktop-visible"
+                                data-button-halls-slide-next="desktop"
+                                aria-label="следующий слайд"
+                            >
+                                <svg
+                                    class="navigation-button__icon"
+                                    width="16"
+                                    height="20"
+                                >
+                                    <use href="./icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <button class="halls__button-reservation button">
+                            забронировать
+                        </button>
+                    </div>
+
+                    <div class="halls__slider halls__slider--desktop">
+                        <div class="swiper halls__main-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./image/halls/hall-1.jpg"
+                                        width="1407"
+                                        height="1009"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./image/halls/hall-1.jpg"
+                                        width="1407"
+                                        height="1009"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./image/halls/hall-1.jpg"
+                                        width="1407"
+                                        height="1009"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./image/halls/hall-1.jpg"
+                                        width="1407"
+                                        height="1009"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="./image/halls/hall-1.jpg"
+                                        width="1407"
+                                        height="1009"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper halls__thumb-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide halls__thumb-slide">
+                                    <img
+                                        src="./image/halls/hall-2.jpg"
+                                        width="281"
+                                        height="169"
+                                    />
+                                    <img
+                                        class="halls__thumb-overlay-icon"
+                                        src="./icons/eye-icon.svg"
+                                        alt="посмотреть слайд"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                                <div class="swiper-slide halls__thumb-slide">
+                                    <img
+                                        src="./image/halls/hall-3.jpg"
+                                        width="281"
+                                        height="169"
+                                    />
+                                    <img
+                                        class="halls__thumb-overlay-icon"
+                                        src="./icons/eye-icon.svg"
+                                        alt="посмотреть слайд"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                                <div class="swiper-slide halls__thumb-slide">
+                                    <img
+                                        src="./image/halls/hall-4.jpg"
+                                        width="281"
+                                        height="169"
+                                    />
+                                    <img
+                                        class="halls__thumb-overlay-icon"
+                                        src="./icons/eye-icon.svg"
+                                        alt="посмотреть слайд"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                                <div class="swiper-slide halls__thumb-slide">
+                                    <img
+                                        src="./image/halls/hall-5.jpg"
+                                        width="281"
+                                        height="169"
+                                    />
+                                    <img
+                                        class="halls__thumb-overlay-icon"
+                                        src="./icons/eye-icon.svg"
+                                        alt="посмотреть слайд"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                                <div class="swiper-slide halls__thumb-slide">
+                                    <img
+                                        src="./image/halls/hall-6.jpg"
+                                        width="281"
+                                        height="169"
+                                    />
+                                    <img
+                                        class="halls__thumb-overlay-icon"
+                                        src="./icons/eye-icon.svg"
+                                        alt="посмотреть слайд"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="overlay"></div>
+
+        <div class="modal">
+            <div
+                class="modal__window modal-reservation"
+                data-modal-window="reservation"
+            >
+                <button
+                    class="modal__close"
+                    aria-label="Закрыть"
+                    title="Закрыть"
+                    data-modal-close
+                >
+                    <img
+                        class="modal__close-icon"
+                        src="./icons/x-cross-icon.svg"
+                        width="22"
+                        height="22"
+                        alt="Закрыть"
+                    />
+                </button>
+                <div class="modal__content modal-reservation__content">
+                    <div class="modal-reservation__title">Заявка на заказ</div>
+                    <form class="modal-reservation__form">
+                        <label class="modal-reservation__lable">
+                            <input
+                                class="modal-reservation__input"
+                                type="text"
+                                placeholder="Ваше имя"
+                                name="name"
+                                required
+                            />
+                        </label>
+                        <label class="modal-reservation__lable">
+                            <input
+                                class="modal-reservation__input"
+                                type="tel"
+                                placeholder="Номер телефона"
+                                name="phone"
+                                required
+                            />
+                        </label>
+                        <label class="modal-reservation__lable">
+                            <input
+                                class="modal-reservation__input"
+                                type="email"
+                                placeholder="E-mail"
+                                name="email"
+                                required
+                            />
+                        </label>
+                        <button class="modal-reservation__submit">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

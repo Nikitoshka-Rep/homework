@@ -1,0 +1,45 @@
+@media (width > 992px) {
+    .dashed {
+        outline: 2px solid transparent;
+        background-image:
+            repeating-linear-gradient(
+                90deg,
+                var(--bg-accent-color) 0px,
+                var(--bg-accent-color) 12px,
+                transparent 12px,
+                transparent 20px
+            ),
+            repeating-linear-gradient(
+                90deg,
+                var(--bg-accent-color) 0px,
+                var(--bg-accent-color) 12px,
+                transparent 12px,
+                transparent 20px
+            ),
+            repeating-linear-gradient(
+                0deg,
+                var(--bg-accent-color) 0px,
+                var(--bg-accent-color) 12px,
+                transparent 12px,
+                transparent 20px
+            ),
+            repeating-linear-gradient(
+                0deg,
+                var(--bg-accent-color) 0px,
+                var(--bg-accent-color) 12px,
+                transparent 12px,
+                transparent 20px
+            );
+        background-size:
+            100% 2px,
+            /* верх */ 100% 2px,
+            /* низ */ 2px 100%,
+            /* лево */ 2px 100%; /* право */
+        background-position:
+            top left,
+            bottom left,
+            top left,
+            top right;
+        background-repeat: no-repeat;
+    }
+}

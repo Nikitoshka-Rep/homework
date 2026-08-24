@@ -1,0 +1,207 @@
+.hero__advantages-list {
+    position: relative;
+    display: grid;
+    grid-template-areas: "a b c d";
+}
+
+.hero__advantages-item:nth-child(1) {
+    grid-area: a;
+}
+.hero__advantages-item:nth-child(2) {
+    grid-area: b;
+}
+.hero__advantages-item:nth-child(3) {
+    grid-area: c;
+}
+.hero__advantages-item:nth-child(4) {
+    grid-area: d;
+}
+
+@media (width > 992px) {
+    .hero__advantages-list {
+        grid-template-columns: repeat(auto-fit, minmax(241px, 1fr));
+    }
+}
+
+@media (width <= 992px) {
+    .hero__advantages-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "a b"
+            "d c";
+    }
+}
+
+.hero__advantages-item {
+    display: flex;
+    align-items: center;
+}
+
+@media (width <= 480px) {
+    .hero__advantages-item {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+@media (width <= 992px) {
+    .hero__advantages-item {
+        padding: 13px 8px 15px 22px;
+    }
+
+    .hero__advantages-item:nth-child(1),
+    .hero__advantages-item:nth-child(4) {
+        padding-left: 0; 
+    }
+}
+
+@media (width > 1270px) {
+    .hero__advantages-item {
+        padding: clamp(0.9375rem, -1.0469rem + 2.5vw, 1.875rem)
+        clamp(0.3125rem, -4.3177rem + 5.8333vw, 2.5rem);
+    }
+}
+
+@media (width <= 1270px) {
+    .hero__advantages-item {
+        padding: 10px 10px;
+    }
+}
+
+/* плашки за контейнером */
+.hero__advantages-item::before,
+.hero__advantages-item::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+}
+
+/* плашки за контейнером */
+@media (width > 992px) {
+    .hero__advantages-item:nth-child(1)::before {
+        top: 0;
+        left: -200px;
+        height: 100%;
+        background-color: var(--bg-accent-color);
+    }
+
+    .hero__advantages-item:nth-child(4)::after {
+        top: 0;
+        right: -200px;
+        height: 100%;
+        background-color: var(--secondary-color);
+    }
+}
+
+/* плашки за контейнером */
+@media (width <= 992px) {
+    .hero__advantages-item::before,
+    .hero__advantages-item::after {
+        height: 50%;
+    }
+
+    .hero__advantages-item:nth-child(1)::before {
+        top: 0;
+        left: -200px;
+        background-color: var(--bg-accent-color);
+    }
+
+    .hero__advantages-item:nth-child(2)::after {
+        top: 0;
+        right: -200px;
+        background-color: var(--secondary-color);
+    }
+    .hero__advantages-item:nth-child(3)::before {
+        top: 50%;
+        left: -200px;
+        background-color: var(--secondary-color);
+    }
+
+    .hero__advantages-item:nth-child(4)::after {
+        top: 50%;
+        right: -200px;
+        background-color: var(--bg-accent-color);
+    }
+}
+
+
+.hero__advantages-item:nth-child(odd) {
+    background-color: var(--bg-accent-color);
+}
+.hero__advantages-item:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+
+.hero__advantages-item-icon {
+    margin-right: clamp(0.3125rem, -1.4073rem + 2.1667vw, 1.125rem);
+    flex-shrink: 0;
+}
+
+@media (width > 1270px) {
+    .hero__advantages-item-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (width <= 1270px) {
+    .hero__advantages-item-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (width <= 576px) {
+    .hero__advantages-item-icon {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+.hero__advantages-item-line {
+    height: 1px;
+    background-color: #ffc6194d;
+    flex-shrink: 0;
+}
+
+@media (width > 992px) {
+    .hero__advantages-item-line {
+        width: clamp(0.3125rem, -3.524rem + 4.8333vw, 2.125rem);
+        margin-right: clamp(0.625rem, -2.9469rem + 4.5vw, 2.3125rem);
+    }
+}
+
+@media (width <= 992px) {
+    .hero__advantages-item-line {
+        width: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (width <= 576px) {
+    .hero__advantages-item-line {
+        width: 18px;
+    }
+}
+
+.hero__advantages-item-desc {
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
+
+@media (width > 768px) {
+    .hero__advantages-item-desc {
+        font-size: 16px;
+        max-width: 195px;
+    }
+}
+
+@media (width <= 768px) {
+    .hero__advantages-item-desc {
+        font-size: 14px;
+        max-width: 146px;
+    }
+}

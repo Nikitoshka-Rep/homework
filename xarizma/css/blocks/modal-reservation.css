@@ -1,0 +1,81 @@
+.modal-reservation {
+    max-width: 600px;
+}
+
+@media (width > 992px) {
+    .modal-reservation {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+.modal-reservation__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-reservation__title {
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: clamp(22px, 1.0032rem + 1.6077vw, 36px);
+    line-height: 1.33333;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.modal-reservation__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-reservation__lable {
+}
+
+.modal-reservation__input {
+    padding: 15px;
+    width: 100%;
+    min-width: 300px;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.modal-reservation__input::placeholder {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.38462;
+    letter-spacing: 0.03em;
+    color: var(--primery-color);
+}
+
+.modal-reservation__submit {
+    padding: 15px;
+    color: var(--color-dark);
+    background-color: var(--main-color);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    transition:
+        color var(--transition-time),
+        background-color var(--transition-time),
+        outline var(--transition-time),
+        border-radius var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .modal-reservation__submit:hover {
+        background-color: transparent;
+        color: var(--accent-color);
+        outline: 1px solid var(--accent-color);
+        border-radius: 8px;
+    }
+}

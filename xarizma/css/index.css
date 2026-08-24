@@ -1,0 +1,21 @@
+/* base */
+@import "./base/normalize.css";
+@import "./base/fonts.css";
+@import "./base/vars.css";
+@import "./base/globals.css";
+
+/* blocks */
+@import "./blocks/header.css";
+@import "./blocks/menu.css";
+@import "./blocks/burger.css";
+@import "./blocks/hero/hero.css";
+@import "./blocks/dashed.css";
+@import "./blocks/line.css";
+@import "./blocks/button.css";
+@import "./blocks/halls.css";
+@import "./blocks/navigation-button.css";
+@import "./blocks/navigation.css";
+@import "./blocks/overlay.css";
+@import "./blocks/modal.css";
+@import "./blocks/modal-reservation.css";
+

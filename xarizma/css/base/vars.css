@@ -1,0 +1,38 @@
+:root {
+  /* font-family */
+  --font-family: "Muller", sans-serif;
+
+  /* colors */
+  --bg-color: #191B20;
+  --bg-secondary-color: #131517;
+  --bg-accent-color:#282b32;
+  --secondary-color: #202124;
+  --main-color: #fff;
+  --main-color-opacity:#ffffff12;
+  --primery-color: #c5c5c5;
+  --accent-color: #f69020;
+  --gray-color:#606571;
+  --color-dark:#000;
+  --text-accent:#ffc619;
+
+  /* container */
+  --container-width: 1818px;
+  --container-padding: 15px;
+
+  /* transitions */
+  --transition-time: .2s;
+
+  /* layers */
+  --layer-negative:-1;
+  --layer-0:0;
+  --layer-1:1;
+  --layer-2:2;
+  --layer-3:3;
+}
+
+/* background: #343a3e; */
+/* #ffc6194d */
+/* #ffc619 */
+/* #2C383F */
+/* #2e3441; 2 */ 
+

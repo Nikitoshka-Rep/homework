@@ -1,0 +1,94 @@
+@media (width > 768px) {
+    .hero__contact-us {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-end;
+        gap: 71px;
+    }
+}
+@media (width <= 768px) {
+    .hero__contact-us{
+        display: none;
+    }
+}
+
+@media (width > 1270px) {
+    .hero__contact-us {
+        right: 0px;
+        bottom: 15%;
+    }
+}
+
+@media (width <= 1270px) {
+    .hero__contact-us {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+.hero__contact-us-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: linear-gradient(
+        217.04deg,
+        #ffc619 21.5%,
+        #f69020 48.98%,
+        #ec5128 80.77%
+    );
+}
+
+@media (width > 1270px) {
+    .hero__contact-us-link {
+        height: 83px;
+        width: 83px;
+    }
+}
+
+@media (width <= 1270px) {
+    .hero__contact-us-link {
+        height: 60px;
+        width: 60px;
+    }
+}
+@media (width <= 992px) {
+    .hero__contact-us-link {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (any-hover: hover) {
+    .hero__contact-us-link:hover .hero__contact-us-icon {
+        fill: var(--main-color);
+    }
+    .hero__contact-us-link:hover + .hero__contact-us-text {
+        color: var(--main-color);
+    }
+}
+
+.hero__contact-us-icon {
+    transform: translateX(-2px);
+    fill: #2c383f;
+    transition: fill var(--transition-time);
+}
+
+.hero__contact-us-text {
+    font-weight: 700;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    transform: rotate(90deg);
+    transition: color var(--transition-time);
+}
+
+@media (width <= 1270px) {
+    .hero__contact-us-text {
+        display: none;
+    }
+}

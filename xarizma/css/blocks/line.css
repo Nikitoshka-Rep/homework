@@ -1,0 +1,10 @@
+.line{
+    position: absolute;
+    display: block;
+    width: 1px;
+    background-color: #ffffff0a;
+    height: 92%;
+    left: 0px;
+    bottom: 0;
+}
+
