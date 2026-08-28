@@ -1,0 +1,291 @@
+.reservation {
+    position: relative;
+    /* z-index: var(--layer-negative); */
+    background-color: var(--bg-secondary-color);
+}
+
+.reservation__container {
+    position: relative;
+
+}
+
+@media (width > 768px) {
+    .reservation__container {
+        padding-block: 109px 96px;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__container {
+        display: flex;
+        flex-direction: column;
+        padding-block: 67px 70px;
+    }
+}
+
+.reservation__underlay {
+    z-index: var(--layer-1);
+}
+
+@media (width > 1062px) {
+    .reservation__underlay{
+        left: 149px;
+    }
+}
+@media (width <= 1062px) {
+    .reservation__underlay{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.reservation__underlay--right {
+    right: 169px;
+    left: unset;
+}
+
+.reservation__title-wrapper {
+    margin-bottom: 56px;
+}
+
+.reservation__title {
+    margin-bottom: 35px;
+}
+
+.reservation__navigation {
+    gap: 28px;
+    z-index: var(--layer-2);
+}
+
+@media (width > 992px) {
+    .reservation__navigation {
+        position: absolute;
+        top: 20%;
+        right: 0;
+    }
+}
+
+@media (width <= 992px) {
+    .reservation__navigation {
+        margin-bottom: 50px;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__navigation {
+        order: 3;
+        margin-bottom: 0;
+    }
+}
+
+.reservation__swiper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    overflow: unset;
+    z-index: 2;
+}
+
+@media (width <= 480px) {
+    .reservation__swiper {
+        transform: translateX(-47px);
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__swiper {
+        margin-bottom: 35px;
+    }
+}
+
+.reservation__slide {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 37px;
+}
+
+@media (width > 768px) {
+    .reservation__slide {
+        width: 285px !important;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__slide {
+        width: 250px !important;
+    }
+}
+
+@media (width > 768px) {
+    .swiper-slide-active .reservation__slide-desc {
+        margin-left: 18px;
+    }
+}
+
+@media (width <= 768px) {
+    .swiper-slide-active .reservation__slide-desc {
+        margin-left: 12px;
+    }
+}
+
+.reservation__slide-count {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: var(--layer-1);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.66667;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+@media (width > 768px) {
+    .reservation__slide-count {
+        width: 61px;
+        height: 61px;
+        top: -31px;
+        right: -18px;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__slide-count {
+        width: 50px;
+        height: 50px;
+        top: -31px;
+        right: -5px;
+    }
+}
+
+.swiper-slide-active .reservation__slide-count {
+    display: flex;
+}
+
+.reservation__slide-frame {
+    display: flex;
+    justify-content: center;
+}
+
+.reservation__slide-frame::before {
+    content: "";
+    position: absolute;
+    display: none;
+    max-width: 285px;
+    max-height: 505px;
+    width: 100%;
+    height: 100%;
+    top: -17px;
+    background-repeat: no-repeat;
+}
+
+@media (width > 768px) {
+    .reservation__slide-frame::before {
+        max-width: 285px;
+        max-height: 505px;
+        background-image: url("../../image/reservation/frame.png");
+        left: 0;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__slide-frame::before {
+        max-width: 250px;
+        max-height: 414px;
+        background-image: url("../../image/reservation/frame-mobile.png");
+        left: 8px;
+    }
+}
+
+.swiper-slide-active .reservation__slide-frame::before {
+    display: block;
+}
+
+.reservation__slide-img {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+@media (width <= 768px) {
+    .reservation__slide-img {
+        width: 206px;
+        height: 389px;
+    }
+}
+
+@media (width > 768px) {
+    .reservation__slide.swiper-slide-active .reservation__slide-img,
+    .reservation__slide.swiper-slide-prev .reservation__slide-img,
+    .reservation__slide.swiper-slide-next .reservation__slide-img {
+        opacity: 1;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__slide.swiper-slide-active .reservation__slide-img {
+        opacity: 1;
+    }
+}
+
+.reservation__slide-desc {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media (width > 768px) {
+    .reservation__slide-desc {
+        margin-left: 17px;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__slide-desc {
+        margin-left: 15px;
+    }
+}
+
+.reservation__slide-icon {
+    flex-shrink: 0;
+}
+
+.reservation__slide-text {
+    font-weight: 500;
+    line-height: 1.33333;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
+
+@media (width > 768px) {
+    .reservation__slide-text {
+        max-width: 195px;
+        font-size: 15px;
+    }
+}
+
+@media (width <= 768px) {
+    .reservation__slide-text {
+        max-width: 160px;
+        font-size: 14px;
+    }
+}
+
+.reservation__slide-link {
+    color: var(--accent-color);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+    .reservation__slide-link:hover {
+        border-color: var(--accent-color);
+    }
+}

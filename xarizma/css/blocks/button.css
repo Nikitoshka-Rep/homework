@@ -4,8 +4,9 @@
     text-transform: uppercase;
     color: #252121;
     border-radius: 60px;
-    max-width: 277px;
-    width: 100%;
+    /* max-width: 277px; */
+    /* width: 100%; */
+    width: 277px;
 
     background: linear-gradient(
         93.25deg,

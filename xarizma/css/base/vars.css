@@ -24,6 +24,7 @@
 
   /* layers */
   --layer-negative:-1;
+  --layer-negative-2:-2;
   --layer-0:0;
   --layer-1:1;
   --layer-2:2;
@@ -35,4 +36,5 @@
 /* #ffc619 */
 /* #2C383F */
 /* #2e3441; 2 */ 
+/* #c5c5c5; */
 

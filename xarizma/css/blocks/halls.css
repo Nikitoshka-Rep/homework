@@ -1,7 +1,7 @@
 .halls {
     position: relative;
     margin-top: -2px; /* скрыть картинку с hero */
-    background-color: var(--bg-color);
+    background-color: var(--bg-secondary-color);
 }
 
 

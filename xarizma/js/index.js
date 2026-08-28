@@ -1,6 +1,7 @@
 import BurgerMenu from "./burger.js";
 import Modal from "./modal.js";
 import { swiperMain, swiperThumb,swiperMainMobile,swiperThumbMobile} from "./swiper.js";
+import { reservationSwiper } from "./reservation-swiper.js";
 
 
 try {
