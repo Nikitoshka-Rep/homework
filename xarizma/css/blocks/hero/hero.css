@@ -1,3 +1,4 @@
+@import "./hero-underlay.css";
 @import "./hero-contact-us-link.css";
 @import "./hero-dancer.css";
 @import "./hero-tag.css";
@@ -5,7 +6,6 @@
 
 .hero {
     position: relative;
-    /* border: 1px dashed var(--bg-accent-color); */
 }
 
 .hero__container {
@@ -47,21 +47,6 @@
         transform: translateY(8%);
     }
 }
-
-
-@media (width > 768px) {
-    .hero__underlay {
-        transform: translateX(153px);
-    }
-}
-
-@media (width <= 768px) {
-    .hero__underlay {
-        left: 50%;
-        transform: translate(-50%);
-    }
-}
-
 
 .hero__content {
     display: flex;

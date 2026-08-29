@@ -31,7 +31,6 @@
     transform: translate(1px, 0) rotate(-180deg);
 }
 
-
 .navigation-button--disabled {
     background-color: transparent;
     border: 1px solid #2e3441;
