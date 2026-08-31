@@ -1,4 +1,3 @@
-@import "./hero-underlay.css";
 @import "./hero-contact-us-link.css";
 @import "./hero-dancer.css";
 @import "./hero-tag.css";
@@ -8,9 +7,14 @@
     position: relative;
 }
 
+@media (width > 992px) {
+    .hero {
+        border: 2px dashed var(--bg-accent-color);
+    }
+}
+
 .hero__container {
     padding-top: clamp(3.25rem, 2.1487rem + 3.6709vw, 5.0625rem);
-    padding-bottom: 2px;
     position: relative;
 }
 
@@ -21,7 +25,7 @@
     z-index: var(--layer-negative);
 }
 
-/* Линии */
+/* !Линии-underlay*/
 @media (width > 992px) {
     .hero__bg::before {
         content: "";
@@ -44,18 +48,39 @@
         z-index: -1;
         right: 15%;
         bottom: 0;
-        transform: translateY(8%);
+        -webkit-transform: translateY(8%);
+            -ms-transform: translateY(8%);
+                transform: translateY(8%);
     }
 }
+@media (width > 768px) {
+    .hero__underlay {
+        -webkit-transform: translateX(153px);
+            -ms-transform: translateX(153px);
+                transform: translateX(153px);
+    }
+}
+@media (width <= 768px) {
+    .hero__underlay {
+        left: 50%;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+    }
+}
+/* !Линии-underlay*/
 
 .hero__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
 }
 
 @media (width > 992px) {
     .hero__wrapper {
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
     }
 }
 
@@ -87,14 +112,19 @@
 
 @media (width <= 768px) {
     .hero__header-subtitle {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 16px;
         margin-bottom: 24px;
     }
 }
 
-.hero__header-subtitle-link {
+.hero__header-subtitle-button {
     display: inline-block;
     padding: 7px 15px 4px;
     border-radius: 60px;
@@ -105,42 +135,55 @@
     background-color: #343a3e;
     text-transform: none;
     outline: 1px solid transparent;
+    -webkit-transition: outline-color var(--transition-time);
     transition: outline-color var(--transition-time);
 }
 
 @media (any-hover: hover) {
-    .hero__header-subtitle-link:hover {
+    .hero__header-subtitle-button:hover {
         outline-color: var(--accent-color);
     }
 }
 
 @media (width > 768px) {
-    .hero__header-subtitle-link {
+    .hero__header-subtitle-button {
         vertical-align: middle;
-        transform: translateY(-7px);
+        -webkit-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+                transform: translateY(-7px);
     }
 }
 @media (width <= 768px) {
-    .hero__header-subtitle-link {
-        align-self: flex-start;
+    .hero__header-subtitle-button {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
     }
 }
 
 .hero__header-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 21px;
 }
 
 @media (width > 768px) {
     .hero__header-list {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 }
 
 @media (width <= 992px) {
     .hero__header-list {
-        align-items: flex-start;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
 
@@ -156,8 +199,12 @@
 }
 
 .hero__header-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 11px;
     font-weight: 400;
     max-width: 250px;
@@ -217,7 +264,9 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gray-color);
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 @media (width <= 992px) {
@@ -241,6 +290,3 @@
         width: auto;
     }
 }
-
-
-

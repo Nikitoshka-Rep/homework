@@ -4,6 +4,12 @@
     width: 100%;
     bottom: 0;
     top: 0;
+    background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(96, 101, 113, 0)),
+        to(rgba(96, 101, 113, 0.05))
+    );
     background: linear-gradient(
         180deg,
         rgba(96, 101, 113, 0) 0%,
@@ -11,7 +17,8 @@
     );
 }
 
-.underlay--reservation {
+.underlay--reservation,
+.underlay--footer {
     background: none;
 }
 
@@ -29,7 +36,6 @@
 
     .underlay.underlay--hero::after {
         height: calc(100% + 133px);
-        /* height: calc(100% + clamp(0.125rem, -19.6265rem + 24.8837vw, 6.8125rem)); */
         bottom: 0;
     }
 }
@@ -72,12 +78,24 @@
 
 @media (width <= 1270px) {
     .underlay {
-        max-width: 350px;
+        max-width: 450px;
     }
 }
 
 @media (width <= 768px) {
     .underlay {
+        max-width: 333px;
+    }
+}
+
+@media (width <= 576px) {
+    .underlay {
         max-width: 233px;
+    }
+}
+
+@media (width <= 768px) {
+    .underlay--faq {
+        background: transparent;
     }
 }

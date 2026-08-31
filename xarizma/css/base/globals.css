@@ -3,7 +3,7 @@
     font-weight: 400;
     color: var(--main-color);
     scroll-behavior: smooth;
-    scroll-padding-top: 98px;
+    /* scroll-padding-top: 98px; */
     scrollbar-gutter: stable;
     overflow-x: hidden;
 }
@@ -11,15 +11,21 @@
 .page__body {
     min-width: 360px;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 .page__body--no-scroll {
     overflow-y: hidden;
+    height: 100vh;
 }
 
 .container {
     width: min(var(--container-width), 100% - var(--container-padding) * 2);
     margin-inline: auto;
+}
+
+.main{
+    
 }
 
 .logo {
@@ -52,7 +58,6 @@ input:focus {
     outline-offset: 2px;
 }
 
-
 .title,
 .subtitle {
     letter-spacing: 0.03em;
@@ -64,10 +69,36 @@ input:focus {
     font-weight: 900;
     /* maxnin 576-1200 */
     /* font-size: clamp(36px, 6.25vw, 75px); */
-    
+
     /* maxnin 576-1700 */
     font-size: clamp(36px, 1.0009rem + 3.4698vw, 75px);
     line-height: 1.25333;
+}
+
+.title-sm {
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
+
+@media (width > 768px) {
+    .title-sm {
+        font-size: 18px;
+        line-height: 1.33333;
+    }
+}
+
+
+@media (width <= 768px) {
+    .title-sm {
+        font-size: 14px;
+        line-height: 1.28571;
+    }
+    .title-sm--fw {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.28571;
+    }
 }
 
 .subtitle {
@@ -87,6 +118,3 @@ input:focus {
         font-size: 18px;
     }
 }
-
-
-

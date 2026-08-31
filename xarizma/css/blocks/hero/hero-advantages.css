@@ -1,5 +1,6 @@
 .hero__advantages-list {
     position: relative;
+    display: -ms-grid;
     display: grid;
     grid-template-areas: "a b c d";
 }
@@ -33,12 +34,17 @@
 }
 
 .hero__advantages-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 @media (width <= 480px) {
     .hero__advantages-item {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 5px;
     }
@@ -51,14 +57,14 @@
 
     .hero__advantages-item:nth-child(1),
     .hero__advantages-item:nth-child(4) {
-        padding-left: 0; 
+        padding-left: 0;
     }
 }
 
 @media (width > 1270px) {
     .hero__advantages-item {
         padding: clamp(0.9375rem, -1.0469rem + 2.5vw, 1.875rem)
-        clamp(0.3125rem, -4.3177rem + 5.8333vw, 2.5rem);
+            clamp(0.3125rem, -4.3177rem + 5.8333vw, 2.5rem);
     }
 }
 
@@ -71,23 +77,25 @@
 /* плашки за контейнером */
 .hero__advantages-item::before,
 .hero__advantages-item::after {
+    --distance: -45px;
+
     content: "";
     position: absolute;
-    width: 200px;
+    width: 45px;
 }
 
 /* плашки за контейнером */
 @media (width > 992px) {
     .hero__advantages-item:nth-child(1)::before {
         top: 0;
-        left: -200px;
+        left: var(--distance);
         height: 100%;
         background-color: var(--bg-accent-color);
     }
 
     .hero__advantages-item:nth-child(4)::after {
         top: 0;
-        right: -200px;
+        right: var(--distance);
         height: 100%;
         background-color: var(--secondary-color);
     }
@@ -102,28 +110,27 @@
 
     .hero__advantages-item:nth-child(1)::before {
         top: 0;
-        left: -200px;
+        left: var(--distance);
         background-color: var(--bg-accent-color);
     }
 
     .hero__advantages-item:nth-child(2)::after {
         top: 0;
-        right: -200px;
+        right: var(--distance);
         background-color: var(--secondary-color);
     }
     .hero__advantages-item:nth-child(3)::before {
         top: 50%;
-        left: -200px;
+        left: var(--distance);
         background-color: var(--secondary-color);
     }
 
     .hero__advantages-item:nth-child(4)::after {
         top: 50%;
-        right: -200px;
+        right: var(--distance);
         background-color: var(--bg-accent-color);
     }
 }
-
 
 .hero__advantages-item:nth-child(odd) {
     background-color: var(--bg-accent-color);
@@ -132,9 +139,9 @@
     background-color: var(--secondary-color);
 }
 
-
 .hero__advantages-item-icon {
     margin-right: clamp(0.3125rem, -1.4073rem + 2.1667vw, 1.125rem);
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
@@ -162,6 +169,7 @@
 .hero__advantages-item-line {
     height: 1px;
     background-color: #ffc6194d;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 

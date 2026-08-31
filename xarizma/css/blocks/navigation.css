@@ -1,14 +1,16 @@
 .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .navigation--halls {
     gap: 32px;
 }
 
-.navigation__counter {
-}
 
 @media (width > 992px) {
     [data-navigation-counter="desktop"] {
@@ -23,8 +25,9 @@
     [data-navigation-counter="desktop"] {
         display: none;
     }
+    
     [data-navigation-counter="mobile"] {
-        display: blok;
+        display: bloсk;
     }
 }
 
@@ -39,6 +42,8 @@
 
 .navigation__current {
     color: var(--main-color);
+    display: inline-block;
+    font-variant-numeric: tabular-nums;
 }
 
 @media (width > 768px) {

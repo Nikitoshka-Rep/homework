@@ -5,43 +5,52 @@
     z-index: var(--layer-negative);
 }
 
-@media(width > 1270px){
-    .hero__dancer{
+@media (width > 1270px) {
+    .hero__dancer {
         width: 700px;
+        -webkit-transform: translate(200px, -200px);
+        -ms-transform: translate(200px, -200px);
         transform: translate(200px, -200px);
     }
 }
 
-@media(width <= 1270px){
-    .hero__dancer{
+@media (width <= 1270px) {
+    .hero__dancer {
         width: 450px;
+        -webkit-transform: translate(100px, 70px);
+        -ms-transform: translate(100px, 70px);
         transform: translate(100px, 70px);
     }
 }
 
-@media(width <= 992px){
-    .hero__dancer{
+@media (width <= 992px) {
+    .hero__dancer {
         width: 450px;
+        -webkit-transform: translate(20px, 180px);
+        -ms-transform: translate(20px, 180px);
         transform: translate(20px, 180px);
     }
 }
 
-@media(width <= 768px){
-    .hero__dancer{
+@media (width <= 768px) {
+    .hero__dancer {
         width: 400px;
+        -webkit-transform: translate(0px, 115px);
+        -ms-transform: translate(0px, 115px);
         transform: translate(0px, 115px);
     }
 }
 
-@media(width <= 600px){
-    .hero__dancer{
+@media (width <= 600px) {
+    .hero__dancer {
         width: 350px;
+        -webkit-transform: translate(87px, 170px);
+        -ms-transform: translate(87px, 170px);
         transform: translate(87px, 170px);
     }
 }
 
-
-.hero__dancer-img{
+.hero__dancer-img {
     display: block;
     width: 100%;
 }

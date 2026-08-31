@@ -1,0 +1,17 @@
+.modal-map{
+    max-width: 540px;
+}
+
+.modal-map__title{
+    margin-bottom: 30px;
+}
+.modal-map__title--accent{
+    color: var(--accent-color);
+}
+
+.modal-map__iframe{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: block;
+}

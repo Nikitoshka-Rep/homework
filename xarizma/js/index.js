@@ -1,6 +1,8 @@
 import BurgerMenu from "./burger.js";
 import Modal from "./modal.js";
 import { swiperMain, swiperThumb,swiperMainMobile,swiperThumbMobile} from "./swiper.js";
+import { reservationSwiper } from "./reservation-swiper.js";
+import { initBackToTop } from "./back-to-top.js";
 
 
 try {
@@ -21,15 +23,14 @@ try {
             MAIN: "main",
             OVERLAY: "overlay",
         },
-        // headerFixed,
     );
-
-    
 
     new Modal({
         PAGE_BODY: "page__body",
         PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
     });
+
+    initBackToTop()
 
 } catch (error) {
     console.error(error);

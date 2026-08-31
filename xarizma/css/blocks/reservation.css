@@ -1,12 +1,11 @@
 .reservation {
     position: relative;
-    /* z-index: var(--layer-negative); */
     background-color: var(--bg-secondary-color);
+    overflow-x: hidden;
 }
 
 .reservation__container {
     position: relative;
-
 }
 
 @media (width > 768px) {
@@ -17,14 +16,19 @@
 
 @media (width <= 768px) {
     .reservation__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding-block: 67px 70px;
     }
 }
 
 .reservation__underlay {
-    z-index: var(--layer-1);
+    z-index: var(--layer-2);
 }
 
 @media (width > 1062px) {
@@ -32,10 +36,13 @@
         left: 149px;
     }
 }
+
 @media (width <= 1062px) {
     .reservation__underlay{
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
 }
 
@@ -73,15 +80,22 @@
 
 @media (width <= 768px) {
     .reservation__navigation {
-        order: 3;
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
         margin-bottom: 0;
     }
 }
 
 .reservation__swiper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-shrink: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 100%;
     overflow: unset;
     z-index: 2;
@@ -89,7 +103,9 @@
 
 @media (width <= 480px) {
     .reservation__swiper {
-        transform: translateX(-47px);
+        -webkit-transform: translateX(-47px);
+            -ms-transform: translateX(-47px);
+                transform: translateX(-47px);
     }
 }
 
@@ -101,9 +117,15 @@
 
 .reservation__slide {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 37px;
 }
 
@@ -134,8 +156,12 @@
 .reservation__slide-count {
     position: absolute;
     display: none;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     z-index: var(--layer-1);
     font-weight: 700;
@@ -145,7 +171,8 @@
     color: var(--main-color);
     border-radius: 50%;
     background-color: var(--accent-color);
-    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
 @media (width > 768px) {
@@ -167,12 +194,18 @@
 }
 
 .swiper-slide-active .reservation__slide-count {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .reservation__slide-frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .reservation__slide-frame::before {
@@ -236,8 +269,12 @@
 }
 
 .reservation__slide-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 16px;
 }
 
@@ -254,7 +291,8 @@
 }
 
 .reservation__slide-icon {
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
 
 .reservation__slide-text {
@@ -281,6 +319,7 @@
 .reservation__slide-link {
     color: var(--accent-color);
     border-bottom: 1px solid transparent;
+    -webkit-transition: border-color var(--transition-time);
     transition: border-color var(--transition-time);
 }
 

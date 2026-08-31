@@ -54,6 +54,13 @@ export default class BurgerMenu {
 		this.body.removeEventListener('touchstart', this.handleTouchStart);
 		this.body.removeEventListener('touchmove', this.handleTouchMove);
 		this.body.removeEventListener('touchend', this.handleTouchEnd);
+
+		document.addEventListener('click', (e) => {
+			const menuItem = e.target.closest('[data-menu-item]');
+			if (menuItem && this.isBurgerMenuOpen()) {
+				this.hideBurgerMenu();
+			}
+		});
 	}
 
 	onWindowResize() {
@@ -120,6 +127,7 @@ export default class BurgerMenu {
 	onBodyClick(event) {
 		const target = event.target;
 		const isLinkInMenu = target.classList.contains(this.config.MENU_LINK);
+		
 		const isMenuOpen = this.isBurgerMenuOpen();
 		const isClickOutsideMenu =
 			!target.closest(`.${this.config.HEADER_MENU}`) &&

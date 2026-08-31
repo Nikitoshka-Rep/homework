@@ -9,13 +9,21 @@
 @import "./blocks/menu.css";
 @import "./blocks/burger.css";
 @import "./blocks/hero/hero.css";
-@import "./blocks/dashed.css";
-@import "./blocks/line.css";
+@import "./blocks/underlay.css";
 @import "./blocks/button.css";
 @import "./blocks/halls.css";
 @import "./blocks/navigation-button.css";
 @import "./blocks/navigation.css";
+@import "./blocks/advantages.css";
+@import "./blocks/reservation.css";
+@import "./blocks/faq.css";
+@import "./blocks/footer.css";
+@import "./blocks/btn-back-to-top.css";
+
+/* other */
+
 @import "./blocks/overlay.css";
 @import "./blocks/modal.css";
 @import "./blocks/modal-reservation.css";
+@import "./blocks/modal-map.css";
 

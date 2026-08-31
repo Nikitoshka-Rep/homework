@@ -23,18 +23,19 @@
                 <a class="header__logo logo" href="#">
                     <img
                         src="./icons/logo-icon.svg"
-                        alt="Логотип караоке-клуба"
+                        alt="Логотип караоке-клуба 'харизма'"
                         width="293"
                         height="67"
                     />
                 </a>
 
-                <nav class="header__menu menu">
+                <nav class="header__menu menu" aria-label="Главная навигация">
                     <div class="menu__contacts">
                         <a
                             class="menu__contacts-phone"
                             href="tel:+380979709090"
                             title="Позвонить по номеру"
+                            data-menu-item
                         >
                             <div class="menu__contacts-icon-wrapper">
                                 <svg width="29" height="29">
@@ -47,31 +48,38 @@
 
                             +38 (097) 970-90-90
                         </a>
-                        <a
+
+                        <button
                             class="menu__contacts-address"
-                            href="https://yandex.ru/maps/-/CTgUnIlV"
-                            title="Показать адресс"
-                            target="_blank"
+                            title="Показать адрес"
+                            data-modal-button="map"
+                            data-modal-speed="300"
+                            data-menu-item
                         >
-                            <div class="menu__contacts-icon-wrapper">
+                            <span class="menu__contacts-icon-wrapper">
                                 <svg width="34" height="34">
                                     <use
                                         class="menu__contacts-icon menu__contacts-icon--reverse"
                                         href="./icons/sprite.svg#pin"
                                     ></use>
                                 </svg>
-                            </div>
+                            </span>
                             м. Лубянка
-                        </a>
+                        </button>
                     </div>
                     <div class="menu__nav">
-                        <a class="menu__nav-link" href="#halls">Наши залы</a>
+                        <a
+                            class="menu__nav-link"
+                            href="#section-halls"
+                            data-menu-item
+                            >Наши залы</a
+                        >
 
                         <button
                             class="menu__nav-link menu__nav-link--accent"
-                            href="#reservation"
                             data-modal-button="reservation"
                             data-modal-speed="500"
+                            data-menu-item
                         >
                             Забронировать
                         </button>
@@ -79,22 +87,24 @@
                 </nav>
 
                 <div class="header__menu-mobile menu__mobile">
-                    <a
+                    <button
                         class="menu__contacts-address"
-                        href="https://yandex.ru/maps/-/CTgUnIlV"
+                        data-modal-button="map"
+                        data-modal-speed="500"
                         title="Показать адресс"
-                        target="_blank"
                         aria-label="Показать адресс"
                     >
-                        <div class="menu__contacts-icon-wrapper">
+                        <span
+                            class="menu__contacts-icon-wrapper menu__contacts-icon-wrapper--mobile"
+                        >
                             <svg width="29" height="29">
                                 <use
                                     class="menu__contacts-icon"
                                     href="./icons/sprite.svg#pin"
                                 ></use>
                             </svg>
-                        </div>
-                    </a>
+                        </span>
+                    </button>
                     <button
                         class="menu__burger burger"
                         aria-expanded="false"
@@ -121,18 +131,24 @@
         </header>
 
         <main class="main">
-            <section class="hero dashed">
+            <section class="hero">
                 <div class="container hero__container">
                     <div class="hero__bg">
-                        <img
-                            src="./image/harizmahall1-bg.png"
-                            width="1024"
-                            height="685"
-                            alt=""
-                        />
+                        <picture>
+                            <source
+                                srcset="./image/harizmahall-bg.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="./image/harizmahall-bg.png"
+                                width="1024"
+                                height="685"
+                                alt="Караоке зал, с изображением девушки в желтых очках на стене"
+                            />
+                        </picture>
                     </div>
 
-                    <div class="hero__underlay"></div>
+                    <div class="hero__underlay underlay underlay--hero"></div>
 
                     <div class="hero__content">
                         <div class="hero__wrapper">
@@ -142,12 +158,15 @@
                             <h2 class="hero__header-subtitle title">
                                 возьми алкоголь и еду с собой
 
-                                <a
-                                    class="hero__header-subtitle-link"
-                                    href="https://yandex.ru/maps/-/CTgUnIlV"
-                                    target="_blank"
-                                    >м. Лубянка</a
+                                <button
+                                    class="hero__header-subtitle-button"
+                                    data-modal-button="map"
+                                    data-modal-speed="500"
+                                    title="Показать адресс м. Лубянка"
+                                    aria-label="Показать адресс м. Лубянка"
                                 >
+                                    м. Лубянка
+                                </button>
                             </h2>
                             <ul class="hero__header-list">
                                 <li class="hero__header-item">
@@ -155,7 +174,7 @@
                                         class="hero__header-item-icon"
                                         src="./icons/cheked-icon.svg"
                                         width="50"
-                                        height="50px"
+                                        height="50"
                                         alt="иконка галочки"
                                     />
                                     Если хочешь попеть и оторваться
@@ -198,13 +217,19 @@
 
                         <div class="hero__right">
                             <div class="hero__dancer">
-                                <img
-                                    class="hero__dancer-img"
-                                    src="./image/dancer-bg.png"
-                                    width="700"
-                                    height="1247"
-                                    alt="Девушка в караоке"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="./image/dancer-bg.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="hero__dancer-img"
+                                        src="./image/dancer-bg.png"
+                                        width="700"
+                                        height="1247"
+                                        alt="Танцующая девушка с микрофоном"
+                                    />
+                                </picture>
                             </div>
 
                             <div class="hero__contact-us">
@@ -305,7 +330,8 @@
                     </footer>
                 </div>
             </section>
-            <section class="halls">
+
+            <section id="section-halls" class="halls">
                 <div class="container halls__container">
                     <div class="halls__sidebar">
                         <h2 class="halls__title title">Наши залы</h2>
@@ -320,39 +346,99 @@
                             <div class="swiper halls__main-slider-mobile">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img
-                                            src="./image/halls/hall-1.jpg"
-                                            width="1407"
-                                            height="1009"
-                                        />
+                                        <div class="halls__main-slide-wrapper">
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./image/halls/hall-1.webp
+                                                    "
+                                                    type="image/webp"
+                                                />
+
+                                                <img
+                                                    src="./image/halls/hall-1.jpg"
+                                                    width="1407"
+                                                    height="1009"
+                                                    alt="караоке зал 1"
+                                                />
+                                            </picture>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img
-                                            src="./image/halls/hall-1.jpg"
-                                            width="1407"
-                                            height="1009"
-                                        />
+                                        <div class="halls__main-slide-wrapper">
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./image/halls/hall-1.webp
+                                                    "
+                                                    type="image/webp"
+                                                />
+
+                                                <img
+                                                    src="./image/halls/hall-1.jpg"
+                                                    width="1407"
+                                                    height="1009"
+                                                    alt="караоке зал 1"
+                                                />
+                                            </picture>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img
-                                            src="./image/halls/hall-1.jpg"
-                                            width="1407"
-                                            height="1009"
-                                        />
+                                        <div class="halls__main-slide-wrapper">
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./image/halls/hall-1.webp
+                                                    "
+                                                    type="image/webp"
+                                                />
+
+                                                <img
+                                                    src="./image/halls/hall-1.jpg"
+                                                    width="1407"
+                                                    height="1009"
+                                                    alt="караоке зал 1"
+                                                />
+                                            </picture>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img
-                                            src="./image/halls/hall-1.jpg"
-                                            width="1407"
-                                            height="1009"
-                                        />
+                                        <div class="halls__main-slide-wrapper">
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./image/halls/hall-1.webp
+                                                    "
+                                                    type="image/webp"
+                                                />
+
+                                                <img
+                                                    src="./image/halls/hall-1.jpg"
+                                                    width="1407"
+                                                    height="1009"
+                                                    alt="караоке зал 1"
+                                                />
+                                            </picture>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img
-                                            src="./image/halls/hall-1.jpg"
-                                            width="1407"
-                                            height="1009"
-                                        />
+                                        <div class="halls__main-slide-wrapper">
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./image/halls/hall-1.webp
+                                                    "
+                                                    type="image/webp"
+                                                />
+
+                                                <img
+                                                    src="./image/halls/hall-1.jpg"
+                                                    width="1407"
+                                                    height="1009"
+                                                    alt="караоке зал 1"
+                                                />
+                                            </picture>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -362,27 +448,21 @@
                                     <div
                                         class="swiper-slide halls__thumb-slide"
                                     >
-                                        <img
-                                            src="./image/halls/hall-2.jpg"
-                                            width="281"
-                                            height="169"
-                                        />
-                                        <img
-                                            class="halls__thumb-overlay-icon"
-                                            src="./icons/eye-icon.svg"
-                                            alt="посмотреть слайд"
-                                            width="50"
-                                            height="50"
-                                        />
-                                    </div>
-                                    <div
-                                        class="swiper-slide halls__thumb-slide"
-                                    >
-                                        <img
-                                            src="./image/halls/hall-3.jpg"
-                                            width="281"
-                                            height="169"
-                                        />
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-2.webp
+                                                "
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./image/halls/hall-2.jpg"
+                                                width="281"
+                                                height="169"
+                                                alt="караоке зал 2"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <img
                                             class="halls__thumb-overlay-icon"
                                             src="./icons/eye-icon.svg"
@@ -394,27 +474,21 @@
                                     <div
                                         class="swiper-slide halls__thumb-slide"
                                     >
-                                        <img
-                                            src="./image/halls/hall-4.jpg"
-                                            width="281"
-                                            height="169"
-                                        />
-                                        <img
-                                            class="halls__thumb-overlay-icon"
-                                            src="./icons/eye-icon.svg"
-                                            alt="посмотреть слайд"
-                                            width="50"
-                                            height="50"
-                                        />
-                                    </div>
-                                    <div
-                                        class="swiper-slide halls__thumb-slide"
-                                    >
-                                        <img
-                                            src="./image/halls/hall-5.jpg"
-                                            width="281"
-                                            height="169"
-                                        />
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-3.webp
+                                                "
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./image/halls/hall-3.jpg"
+                                                width="281"
+                                                height="169"
+                                                alt="караоке зал 3"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <img
                                             class="halls__thumb-overlay-icon"
                                             src="./icons/eye-icon.svg"
@@ -426,11 +500,73 @@
                                     <div
                                         class="swiper-slide halls__thumb-slide"
                                     >
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-4.webp
+                                                "
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./image/halls/hall-4.jpg"
+                                                width="281"
+                                                height="169"
+                                                alt="караоке зал 4"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <img
-                                            src="./image/halls/hall-6.jpg"
-                                            width="281"
-                                            height="169"
+                                            class="halls__thumb-overlay-icon"
+                                            src="./icons/eye-icon.svg"
+                                            alt="посмотреть слайд"
+                                            width="50"
+                                            height="50"
                                         />
+                                    </div>
+                                    <div
+                                        class="swiper-slide halls__thumb-slide"
+                                    >
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-5.webp
+                                                "
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./image/halls/hall-5.jpg"
+                                                width="281"
+                                                height="169"
+                                                alt="караоке зал 5"
+                                                loading="lazy"
+                                            />
+                                        </picture>
+                                        <img
+                                            class="halls__thumb-overlay-icon"
+                                            src="./icons/eye-icon.svg"
+                                            alt="посмотреть слайд"
+                                            width="50"
+                                            height="50"
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide halls__thumb-slide"
+                                    >
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-6.webp
+                                                "
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./image/halls/hall-6.jpg"
+                                                width="281"
+                                                height="169"
+                                                alt="караоке зал 6"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <img
                                             class="halls__thumb-overlay-icon"
                                             src="./icons/eye-icon.svg"
@@ -481,13 +617,19 @@
                                 </svg>
                             </button>
 
-                            <div class="navigation__counter" data-navigation-counter="desktop">
+                            <div
+                                class="navigation__counter"
+                                data-navigation-counter="desktop"
+                            >
                                 <span class="navigation__current">1</span>
                                 <span class="navigation__divider">из</span>
                                 <span class="navigation__total">17</span>
                             </div>
 
-                            <div class="navigation__counter-mobile" data-navigation-counter="mobile">
+                            <div
+                                class="navigation__counter-mobile"
+                                data-navigation-counter="mobile"
+                            >
                                 <span class="navigation__current">1</span>
                                 <span class="navigation__divider">из</span>
                                 <span class="navigation__total">17</span>
@@ -522,7 +664,12 @@
                             </button>
                         </div>
 
-                        <button class="halls__button-reservation button">
+                        <button
+                            class="halls__button-reservation button"
+                            data-modal-button="reservation"
+                            data-modal-speed="300"
+                            data-menu-item
+                        >
                             забронировать
                         </button>
                     </div>
@@ -531,64 +678,119 @@
                         <div class="swiper halls__main-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img
-                                        src="./image/halls/hall-1.jpg"
-                                        width="1407"
-                                        height="1009"
-                                    />
+                                    <div class="halls__main-slide-wrapper">
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-1.webp
+                                                "
+                                                type="image/webp"
+                                            />
+
+                                            <img
+                                                src="./image/halls/hall-1.jpg"
+                                                width="1407"
+                                                height="1009"
+                                                alt="караоке зал 1"
+                                            />
+                                        </picture>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img
-                                        src="./image/halls/hall-1.jpg"
-                                        width="1407"
-                                        height="1009"
-                                    />
+                                    <div class="halls__main-slide-wrapper">
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-1.webp
+                                                "
+                                                type="image/webp"
+                                            />
+
+                                            <img
+                                                src="./image/halls/hall-1.jpg"
+                                                width="1407"
+                                                height="1009"
+                                                alt="караоке зал 1"
+                                            />
+                                        </picture>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img
-                                        src="./image/halls/hall-1.jpg"
-                                        width="1407"
-                                        height="1009"
-                                    />
+                                    <div class="halls__main-slide-wrapper">
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-1.webp
+                                                "
+                                                type="image/webp"
+                                            />
+
+                                            <img
+                                                src="./image/halls/hall-1.jpg"
+                                                width="1407"
+                                                height="1009"
+                                                alt="караоке зал 1"
+                                            />
+                                        </picture>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img
-                                        src="./image/halls/hall-1.jpg"
-                                        width="1407"
-                                        height="1009"
-                                    />
+                                    <div class="halls__main-slide-wrapper">
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-1.webp
+                                                "
+                                                type="image/webp"
+                                            />
+
+                                            <img
+                                                src="./image/halls/hall-1.jpg"
+                                                width="1407"
+                                                height="1009"
+                                                alt="караоке зал 1"
+                                            />
+                                        </picture>
+                                    </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img
-                                        src="./image/halls/hall-1.jpg"
-                                        width="1407"
-                                        height="1009"
-                                    />
+                                    <div class="halls__main-slide-wrapper">
+                                        <picture>
+                                            <source
+                                                srcset="
+                                                    ./image/halls/hall-1.webp
+                                                "
+                                                type="image/webp"
+                                            />
+
+                                            <img
+                                                src="./image/halls/hall-1.jpg"
+                                                width="1407"
+                                                height="1009"
+                                                alt="караоке зал 1"
+                                            />
+                                        </picture>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper halls__thumb-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide halls__thumb-slide">
-                                    <img
-                                        src="./image/halls/hall-2.jpg"
-                                        width="281"
-                                        height="169"
-                                    />
-                                    <img
-                                        class="halls__thumb-overlay-icon"
-                                        src="./icons/eye-icon.svg"
-                                        alt="посмотреть слайд"
-                                        width="50"
-                                        height="50"
-                                    />
-                                </div>
-                                <div class="swiper-slide halls__thumb-slide">
-                                    <img
-                                        src="./image/halls/hall-3.jpg"
-                                        width="281"
-                                        height="169"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="./image/halls/hall-2.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./image/halls/hall-2.jpg"
+                                            width="281"
+                                            height="169"
+                                            alt="караоке зал 2"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+
                                     <img
                                         class="halls__thumb-overlay-icon"
                                         src="./icons/eye-icon.svg"
@@ -598,25 +800,19 @@
                                     />
                                 </div>
                                 <div class="swiper-slide halls__thumb-slide">
-                                    <img
-                                        src="./image/halls/hall-4.jpg"
-                                        width="281"
-                                        height="169"
-                                    />
-                                    <img
-                                        class="halls__thumb-overlay-icon"
-                                        src="./icons/eye-icon.svg"
-                                        alt="посмотреть слайд"
-                                        width="50"
-                                        height="50"
-                                    />
-                                </div>
-                                <div class="swiper-slide halls__thumb-slide">
-                                    <img
-                                        src="./image/halls/hall-5.jpg"
-                                        width="281"
-                                        height="169"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="./image/halls/hall-3.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./image/halls/hall-3.jpg"
+                                            width="281"
+                                            height="169"
+                                            alt="караоке зал 3"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                     <img
                                         class="halls__thumb-overlay-icon"
                                         src="./icons/eye-icon.svg"
@@ -626,11 +822,63 @@
                                     />
                                 </div>
                                 <div class="swiper-slide halls__thumb-slide">
+                                    <picture>
+                                        <source
+                                            srcset="./image/halls/hall-4.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./image/halls/hall-4.jpg"
+                                            width="281"
+                                            height="169"
+                                            alt="караоке зал 4"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                     <img
-                                        src="./image/halls/hall-6.jpg"
-                                        width="281"
-                                        height="169"
+                                        class="halls__thumb-overlay-icon"
+                                        src="./icons/eye-icon.svg"
+                                        alt="посмотреть слайд"
+                                        width="50"
+                                        height="50"
                                     />
+                                </div>
+                                <div class="swiper-slide halls__thumb-slide">
+                                    <picture>
+                                        <source
+                                            srcset="./image/halls/hall-5.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./image/halls/hall-5.jpg"
+                                            width="281"
+                                            height="169"
+                                            alt="караоке зал 5"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                    <img
+                                        class="halls__thumb-overlay-icon"
+                                        src="./icons/eye-icon.svg"
+                                        alt="посмотреть слайд"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                                <div class="swiper-slide halls__thumb-slide">
+                                    <picture>
+                                        <source
+                                            srcset="./image/halls/hall-6.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./image/halls/hall-6.jpg"
+                                            width="281"
+                                            height="169"
+                                            alt="караоке зал 6"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                     <img
                                         class="halls__thumb-overlay-icon"
                                         src="./icons/eye-icon.svg"
@@ -644,7 +892,881 @@
                     </div>
                 </div>
             </section>
+
+            <section class="advantages">
+                <div class="container advantages__container">
+                    <h2 class="advantages__title title">наши Преимущества</h2>
+                    <h3 class="advantages__subtitle subtitle">
+                        Почему гости выбирают нас
+                    </h3>
+                    <div class="advantages__underlay underlay"></div>
+                    <div class="advantages__content">
+                        <div class="advantages__grid">
+                            <div class="advantages__card">
+                                <svg
+                                    class="advantages__card-icon"
+                                    width="80"
+                                    height="80"
+                                >
+                                    <use
+                                        href="./icons/advantages-sprite.svg#dress-code"
+                                    ></use>
+                                </svg>
+                                <h4 class="advantages__card-title title-sm">
+                                    Никакого дресс-контроля
+                                </h4>
+                            </div>
+
+                            <div class="advantages__card">
+                                <svg
+                                    class="advantages__card-icon"
+                                    width="86"
+                                    height="86"
+                                >
+                                    <use
+                                        href="./icons/advantages-sprite.svg#disk"
+                                    ></use>
+                                </svg>
+                                <h4 class="advantages__card-title title-sm">
+                                    ~ 40.000 песен в сет листе
+                                </h4>
+                                <ul class="advantages__card-list">
+                                    <li class="advantages__card-item">
+                                        Более 50,000 студийных фонограмм
+                                    </li>
+                                    <li class="advantages__card-item">
+                                        Ежемесячное обновления репертуара
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="advantages__card">
+                                <svg
+                                    class="advantages__card-icon"
+                                    width="80"
+                                    height="80"
+                                >
+                                    <use
+                                        href="./icons/advantages-sprite.svg#company"
+                                    ></use>
+                                </svg>
+                                <h4 class="advantages__card-title title-sm">
+                                    Индивидуальные залы
+                                </h4>
+                                <ul class="advantages__card-list">
+                                    <li class="advantages__card-item">
+                                        Только Ваша компания
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="advantages__card">
+                                <svg
+                                    class="advantages__card-icon"
+                                    width="83"
+                                    height="83"
+                                >
+                                    <use
+                                        href="./icons/advantages-sprite.svg#deposit"
+                                    ></use>
+                                </svg>
+                                <h4 class="advantages__card-title title-sm">
+                                    Без депозита
+                                </h4>
+                                <ul class="advantages__card-list">
+                                    <li
+                                        class="advantages__card-item advantages__card-item--accent"
+                                    >
+                                        Мы не берем депозит
+                                    </li>
+                                    <li class="advantages__card-item">
+                                        Оплата происходит за человека в час
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="advantages__card">
+                                <svg
+                                    class="advantages__card-icon"
+                                    width="86"
+                                    height="86"
+                                >
+                                    <use
+                                        href="./icons/advantages-sprite.svg#center"
+                                    ></use>
+                                </svg>
+                                <h4 class="advantages__card-title title-sm">
+                                    В самом центре Москвы
+                                </h4>
+                                <ul class="advantages__card-list">
+                                    <li class="advantages__card-item">
+                                        м. Лубянка
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="advantages__card">
+                                <svg
+                                    class="advantages__card-icon"
+                                    width="73"
+                                    height="73"
+                                >
+                                    <use
+                                        href="./icons/advantages-sprite.svg#champagne"
+                                    ></use>
+                                </svg>
+                                <h4 class="advantages__card-title title-sm">
+                                    Нет пробкового сбора
+                                </h4>
+                                <ul class="advantages__card-list">
+                                    <li class="advantages__card-item">
+                                        <p>
+                                            Можно приносить с собой еду, напитки
+                                            и алкоголь
+                                            <strong
+                                                class="advantages__card-item-strong"
+                                                >без пробкового сбора</strong
+                                            >
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="advantages__reservation">
+                            <div class="advantages__bg-wrapper">
+                                <div class="advantages__img-wrapper-wall">
+                                    <picture>
+                                        <source
+                                            srcset="./image/wall-bg.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="advantages__bg-img-wall"
+                                            src="./image/wall-bg.png"
+                                            alt="кирпичная стена"
+                                            width="787"
+                                            height="783"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="advantages__img-wrapper-microphone">
+                                    <picture>
+                                        <source
+                                            srcset="./image/microphone-bg.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./image/microphone-bg.png"
+                                            class="advantages__bg-img-microphone"
+                                            width="450"
+                                            height="684"
+                                            alt="микрофон"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+                            </div>
+
+                            <button
+                                class="advantages__button-reservation button"
+                                data-modal-button="reservation"
+                                data-modal-speed="300"
+                                data-menu-item
+                            >
+                                забронировать зал
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reservation">
+                <div class="container reservation__container">
+                    <div class="reservation__underlay underlay"></div>
+                    <div
+                        class="reservation__underlay reservation__underlay--right underlay underlay--reservation"
+                    ></div>
+
+                    <div class="reservation__title-wrapper">
+                        <h2 class="reservation__title title">
+                            Как забронировать зал?
+                        </h2>
+                        <h3 class="reservation__subtitle subtitle">
+                            бронирование по шагам в чат-боте
+                        </h3>
+                    </div>
+
+                    <div
+                        class="reservation__navigation navigation navigation--reservation"
+                    >
+                        <button
+                            class="navigation-button navigation-button--prev"
+                            data-button-reservation-slide-prev
+                            aria-label="предыдущий слайд"
+                        >
+                            <svg
+                                class="navigation-button__icon"
+                                width="16"
+                                height="20"
+                            >
+                                <use href="./icons/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+
+                        <div
+                            class="navigation__counter"
+                            data-reservation-navigation-counter
+                        >
+                            <span class="navigation__current">3</span>
+                            <span class="navigation__divider">из</span>
+                            <span class="navigation__total">9</span>
+                        </div>
+
+                        <button
+                            class="navigation-button navigation-button--next"
+                            data-button-reservation-slide-next
+                            aria-label="следующий слайд"
+                        >
+                            <svg
+                                class="navigation-button__icon"
+                                width="16"
+                                height="20"
+                            >
+                                <use href="./icons/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="reservation__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="reservation__slide swiper-slide">
+                                <div class="reservation__slide-count">1</div>
+
+                                <div class="reservation__slide-frame">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./image/reservation/screenshot-1.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="reservation__slide-img"
+                                            src="./image/reservation/screenshot-1.jpg"
+                                            alt="Перейти в чат бот"
+                                            width="252"
+                                            height="474"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="reservation__slide-desc">
+                                    <svg width="41" height="41">
+                                        <use
+                                            class="reservation__slide-icon"
+                                            href="./icons/reservation-sprite.svg#enter"
+                                        ></use>
+                                    </svg>
+                                    <p class="reservation__slide-text">
+                                        Перейти в чат-бот
+                                        <a
+                                            class="reservation__slide-link"
+                                            href="№"
+                                            >fh_harizma_bot</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="reservation__slide swiper-slide">
+                                <div class="reservation__slide-count">2</div>
+
+                                <div class="reservation__slide-frame">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./image/reservation/screenshot-2.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="reservation__slide-img"
+                                            src="./image/reservation/screenshot-2.jpg"
+                                            alt="Выбрать колличество человек"
+                                            width="252"
+                                            height="474"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="reservation__slide-desc">
+                                    <svg width="41" height="41">
+                                        <use
+                                            class="reservation__slide-icon"
+                                            href="./icons/reservation-sprite.svg#crowd"
+                                        ></use>
+                                    </svg>
+                                    <p class="reservation__slide-text">
+                                        Выбрать колличество человек
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="reservation__slide swiper-slide">
+                                <div class="reservation__slide-count">3</div>
+
+                                <div class="reservation__slide-frame">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./image/reservation/screenshot-3.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="reservation__slide-img"
+                                            src="./image/reservation/screenshot-3.jpg"
+                                            alt="Колличество часов посищения"
+                                            width="252"
+                                            height="474"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="reservation__slide-desc">
+                                    <svg width="41" height="41">
+                                        <use
+                                            class="reservation__slide-icon"
+                                            href="./icons/reservation-sprite.svg#hours"
+                                        ></use>
+                                    </svg>
+                                    <p class="reservation__slide-text">
+                                        Выбрать колличество часов посещения
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="reservation__slide swiper-slide">
+                                <div class="reservation__slide-count">4</div>
+
+                                <div class="reservation__slide-frame">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./image/reservation/screenshot-4.webp
+                                            "
+                                            type="image/webp"
+                                        />
+
+                                        <img
+                                            class="reservation__slide-img"
+                                            src="./image/reservation/screenshot-4.jpg"
+                                            alt="Выбрать дату"
+                                            width="252"
+                                            height="474"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="reservation__slide-desc">
+                                    <svg width="41" height="41">
+                                        <use
+                                            class="reservation__slide-icon"
+                                            href="./icons/reservation-sprite.svg#calendar"
+                                        ></use>
+                                    </svg>
+                                    <p class="reservation__slide-text">
+                                        Выбрать дату
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="reservation__slide swiper-slide">
+                                <div class="reservation__slide-count">5</div>
+
+                                <div class="reservation__slide-frame">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./image/reservation/screenshot-5.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="reservation__slide-img"
+                                            src="./image/reservation/screenshot-5.jpg"
+                                            alt="Выбрать время страта брони"
+                                            width="252"
+                                            height="474"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="reservation__slide-desc">
+                                    <svg width="41" height="41">
+                                        <use
+                                            class="reservation__slide-icon"
+                                            href="./icons/reservation-sprite.svg#stopwatch"
+                                        ></use>
+                                    </svg>
+                                    <p class="reservation__slide-text">
+                                        Выбрать время страта брони
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="reservation__slide swiper-slide">
+                                <div class="reservation__slide-count">6</div>
+
+                                <div class="reservation__slide-frame">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./image/reservation/screenshot-2.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="reservation__slide-img"
+                                            src="./image/reservation/screenshot-6.jpg"
+                                            alt="Перейти в чат бот"
+                                            width="252"
+                                            height="474"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="reservation__slide-desc">
+                                    <svg width="41" height="41">
+                                        <use
+                                            class="reservation__slide-icon"
+                                            href="./icons/reservation-sprite.svg#enter"
+                                        ></use>
+                                    </svg>
+                                    <p class="reservation__slide-text">
+                                        Перейти в чат-бот
+                                        <a
+                                            class="reservation__slide-link"
+                                            href="№"
+                                            >fh_harizma_bot</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq">
+                <div class="container faq__container">
+                    <h2 class="faq__title title">Вопросы и ответы</h2>
+                    <h3 class="faq__subtitle subtitle">
+                        Мы подготовили ответы на часто задаваемые вопросы
+                    </h3>
+                    <div class="faq__underlay underlay underlay--faq"></div>
+                    <div class="faq__content">
+                        <div class="faq__accordion">
+                            <details class="faq__details" name="faq" open>
+                                <summary class="faq__summary title-sm">
+                                    Какое у вас караоке?
+                                    <span class="faq__summary-wrapper-icon">
+                                        <svg width="19" height="12">
+                                            <use
+                                                class="faq__summary-icon"
+                                                href="./icons/sprite.svg#arrow"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="faq__summary-list">
+                                    <li class="faq__summary-item">
+                                        Более 50,000 студийных фонограмм. Из них
+                                        80% - оригинальные минусовки в качестве
+                                        PRO (mp3 - WAV).
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Ежемесячное обновления репертуара.
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Более 10,000 специальных фонограмм в
+                                        сопровождении оригинальных видеоклипов.
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details class="faq__details" name="faq">
+                                <summary class="faq__summary title-sm">
+                                    Есть ли у вас английские песни?
+                                    <span class="faq__summary-wrapper-icon">
+                                        <svg width="19" height="12">
+                                            <use
+                                                class="faq__summary-icon"
+                                                href="./icons/sprite.svg#arrow"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="faq__summary-list">
+                                    <li class="faq__summary-item">
+                                        Более 50,000 студийных фонограмм. Из них
+                                        80% - оригинальные минусовки в качестве
+                                        PRO (mp3 - WAV).
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Ежемесячное обновления репертуара.
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Более 10,000 специальных фонограмм в
+                                        сопровождении оригинальных видеоклипов.
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details class="faq__details" name="faq">
+                                <summary class="faq__summary title-sm">
+                                    Можно ли подключить телефон?
+                                    <span class="faq__summary-wrapper-icon">
+                                        <svg width="19" height="12">
+                                            <use
+                                                class="faq__summary-icon"
+                                                href="./icons/sprite.svg#arrow"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="faq__summary-list">
+                                    <li class="faq__summary-item">
+                                        Более 50,000 студийных фонограмм. Из них
+                                        80% - оригинальные минусовки в качестве
+                                        PRO (mp3 - WAV).
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Ежемесячное обновления репертуара.
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Более 10,000 специальных фонограмм в
+                                        сопровождении оригинальных видеоклипов.
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details class="faq__details" name="faq">
+                                <summary class="faq__summary title-sm">
+                                    Сколько микрофонов в каждом зале?
+                                    <span class="faq__summary-wrapper-icon">
+                                        <svg width="19" height="12">
+                                            <use
+                                                class="faq__summary-icon"
+                                                href="./icons/sprite.svg#arrow"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="faq__summary-list">
+                                    <li class="faq__summary-item">
+                                        Более 50,000 студийных фонограмм. Из них
+                                        80% - оригинальные минусовки в качестве
+                                        PRO (mp3 - WAV).
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Ежемесячное обновления репертуара.
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Более 10,000 специальных фонограмм в
+                                        сопровождении оригинальных видеоклипов.
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details class="faq__details" name="faq">
+                                <summary class="faq__summary title-sm">
+                                    Есть ли оплата картой?
+                                    <span class="faq__summary-wrapper-icon">
+                                        <svg width="19" height="12">
+                                            <use
+                                                class="faq__summary-icon"
+                                                href="./icons/sprite.svg#arrow"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="faq__summary-list">
+                                    <li class="faq__summary-item">
+                                        Более 50,000 студийных фонограмм. Из них
+                                        80% - оригинальные минусовки в качестве
+                                        PRO (mp3 - WAV).
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Ежемесячное обновления репертуара.
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Более 10,000 специальных фонограмм в
+                                        сопровождении оригинальных видеоклипов.
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details class="faq__details" name="faq">
+                                <summary class="faq__summary title-sm">
+                                    Можно приность с собой алкоголь и еду?
+                                    <span class="faq__summary-wrapper-icon">
+                                        <svg width="19" height="12">
+                                            <use
+                                                class="faq__summary-icon"
+                                                href="./icons/sprite.svg#arrow"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="faq__summary-list">
+                                    <li class="faq__summary-item">
+                                        Более 50,000 студийных фонограмм. Из них
+                                        80% - оригинальные минусовки в качестве
+                                        PRO (mp3 - WAV).
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Ежемесячное обновления репертуара.
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Более 10,000 специальных фонограмм в
+                                        сопровождении оригинальных видеоклипов.
+                                    </li>
+                                </ul>
+                            </details>
+
+                            <details class="faq__details" name="faq">
+                                <summary class="faq__summary title-sm">
+                                    Как расчитывается стоимость?
+                                    <span class="faq__summary-wrapper-icon">
+                                        <svg width="19" height="12">
+                                            <use
+                                                class="faq__summary-icon"
+                                                href="./icons/sprite.svg#arrow"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="faq__summary-list">
+                                    <li class="faq__summary-item">
+                                        Более 50,000 студийных фонограмм. Из них
+                                        80% - оригинальные минусовки в качестве
+                                        PRO (mp3 - WAV).
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Ежемесячное обновления репертуара.
+                                    </li>
+                                    <li class="faq__summary-item">
+                                        Более 10,000 специальных фонограмм в
+                                        сопровождении оригинальных видеоклипов.
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+
+                        <div class="faq__detail">
+                            <p class="faq__detail-desc">
+                                В нашем заведении Бельгийский ковролин. На входе
+                                выдают
+                                <span class="faq__detail-desc-accent"
+                                    >индивидуально запакованные тапочки,</span
+                                >
+                                в которые необходимо переобуться.
+                            </p>
+                            <div class="faq__detail-bg">
+                                <picture>
+                                    <source
+                                        srcset="./image/wall-bg-2.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./image/wall-bg-2.png"
+                                        alt="кирпичная стена"
+                                        width="787"
+                                        height="783"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+                            <picture>
+                                <source
+                                    srcset="./image/slippers.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    class="faq__detail-img"
+                                    src="./image/slippers.png"
+                                    alt="Тапочки"
+                                    width="553"
+                                    height="339"
+                                    loading="lazy"
+                                />
+                            </picture>
+
+                            <button
+                                class="faq__detail-button button"
+                                data-modal-button="reservation"
+                                data-modal-speed="300"
+                                data-menu-item
+                            >
+                                Забронировать зал
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container back-to-top__container">
+                <div class="back-to-top">
+                    <button class="back-to-top__button">
+                        <svg class="back-to-top__icon" width="16" height="20">
+                            <use href="./icons/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
+
+                    <span class="back-to-top__text">Подняться вверх</span>
+                </div>
+            </div>
         </main>
+
+        <footer class="footer">
+            <div class="container footer__container">
+                <a class="footer__logo logo" href="#">
+                    <img
+                        src="./icons/logo-icon.svg"
+                        alt="Логотип караоке-клуба 'харизма' "
+                        width="293"
+                        height="67"
+                    />
+                </a>
+
+                <div class="footer__underlay underlay"></div>
+                <div
+                    class="footer__underlay footer__underlay--right underlay underlay--footer"
+                ></div>
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__item-link" href="tel:380979709090">
+                            <span class="footer__item-icon-wrapper">
+                                <svg
+                                    class="footer__item-icon"
+                                    width="29"
+                                    height="29"
+                                >
+                                    <use href="./icons/sprite.svg#phone"></use>
+                                </svg>
+                            </span>
+                            +38 (097) 970-90-90
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__item-link" href="#section-halls">
+                            <span class="footer__item-icon-wrapper">
+                                <svg
+                                    class="footer__item-icon"
+                                    width="28"
+                                    height="28"
+                                >
+                                    <use
+                                        href="./icons/sprite.svg#calendar"
+                                    ></use>
+                                </svg>
+                            </span>
+                            Пн — Вс круглосуточно
+                        </a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a
+                            class="footer__item-link"
+                            href="https://yandex.ru/maps/-/CTT5eC1C"
+                            target="_blank"
+                        >
+                            <span class="footer__item-icon-wrapper">
+                                <svg
+                                    class="footer__item-icon"
+                                    width="34"
+                                    height="34"
+                                >
+                                    <use href="./icons/sprite.svg#pin"></use>
+                                </svg>
+                            </span>
+                            м. Лубянка, ул. Сретенский переулок, 4
+                        </a>
+                    </li>
+                </ul>
+
+                <nav class="footer__menu menu" aria-label="Навигация в подвале">
+                    <div class="menu__contacts">
+                        <a
+                            class="menu__contacts-phone"
+                            href="tel:+380979709090"
+                            title="Позвонить по номеру"
+                            data-menu-item
+                        >
+                            <div class="menu__contacts-icon-wrapper">
+                                <svg width="29" height="29">
+                                    <use
+                                        class="menu__contacts-icon"
+                                        href="./icons/sprite.svg#phone"
+                                    ></use>
+                                </svg>
+                            </div>
+
+                            +38 (097) 970-90-90
+                        </a>
+                        <button
+                            class="menu__contacts-address"
+                            title="Показать адрес"
+                            aria-label="Показать адрес"
+                            data-menu-item
+                            data-modal-button="map"
+                            data-modal-speed="300"
+                        >
+                            <span class="menu__contacts-icon-wrapper">
+                                <svg width="34" height="34">
+                                    <use
+                                        class="menu__contacts-icon menu__contacts-icon--reverse"
+                                        href="./icons/sprite.svg#pin"
+                                    ></use>
+                                </svg>
+                            </span>
+                            м. Лубянка
+                        </button>
+                    </div>
+                    <div class="menu__nav">
+                        <a class="menu__nav-link" href="#section-halls">Наши залы</a>
+
+                        <button
+                            class="menu__nav-link menu__nav-link--accent"
+                            data-modal-button="reservation"
+                            data-modal-speed="500"
+                        >
+                            Забронировать
+                        </button>
+                    </div>
+                </nav>
+
+                <button
+                    class="footer__button"
+                    data-modal-button="reservation"
+                    data-modal-speed="300"
+                    data-menu-item
+                >
+                    Построить маршрут
+                </button>
+            </div>
+        </footer>
 
         <div class="overlay"></div>
 
@@ -701,6 +1823,36 @@
                             Отправить
                         </button>
                     </form>
+                </div>
+            </div>
+            <div class="modal__window modal-map" data-modal-window="map">
+                <button
+                    class="modal__close"
+                    aria-label="Закрыть"
+                    title="Закрыть"
+                    data-modal-close
+                >
+                    <img
+                        class="modal__close-icon"
+                        src="./icons/x-cross-icon.svg"
+                        width="22"
+                        height="22"
+                        alt="Закрыть"
+                    />
+                </button>
+
+                <div class="modal__content modal-map__content">
+                    <h4 class="modal-map__title title-sm">
+                        Наше расположение на карте
+                        <span class="modal-map__title--accent">м. Лубянка</span>
+                        ул. Сретенский переулок, 4
+                    </h4>
+
+                    <iframe
+                        class="modal-map__iframe"
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A03e041d52a2427881c529fa6f445af1f9fc6a2ef33ec1e9d8ea1afd495b82457&amp;source=constructor"
+                        frameborder="0"
+                    ></iframe>
                 </div>
             </div>
         </div>

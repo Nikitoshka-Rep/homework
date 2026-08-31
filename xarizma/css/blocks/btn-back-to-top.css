@@ -1,0 +1,119 @@
+.back-to-top__container {
+    position: relative;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 10;
+    right: 15px;
+}
+
+.back-to-top--visible{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@media(width > 992px){
+    .back-to-top{
+        gap: 37px;
+        bottom: 64px;
+    }
+}
+
+@media(width <= 992px){
+    .back-to-top{
+        gap: 12px;
+        bottom: 20%;
+    }
+}
+
+@media(width <= 768px){
+    .back-to-top{
+        gap: 12px;
+        bottom: 28%;
+    }
+}
+
+.back-to-top__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+@media (width > 992px) {
+    .back-to-top__button {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (width <= 992px) {
+    .back-to-top__button {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (any-hover: hover) {
+    .back-to-top__button:hover .back-to-top__icon {
+        stroke: var(--accent-color);
+    }
+    .back-to-top__button:hover + .back-to-top__text {
+        color: var(--accent-color);
+    }
+}
+
+.back-to-top__icon {
+    stroke: var(--gray-color);
+    rotate: 90deg;
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transition: stroke var(--transition-time);
+    transition: stroke var(--transition-time);
+}
+
+@media(width > 992px){
+    .back-to-top__icon{
+        width: 16px;
+        height: 20px;
+    }
+}
+
+@media(width <= 992px){
+    .back-to-top__icon{
+        width: 13px;
+        height: 9px;
+    }
+}
+
+.back-to-top__text {
+    font-weight: 700;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-color);
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    -webkit-transition: color var(--transition-time);
+    transition: color var(--transition-time);
+}

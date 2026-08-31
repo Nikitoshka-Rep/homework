@@ -1,7 +1,3 @@
-.modal-reservation {
-    max-width: 600px;
-}
-
 @media (width > 992px) {
     .modal-reservation {
         width: 100%;
@@ -10,10 +6,19 @@
 }
 
 .modal-reservation__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .modal-reservation__title {
@@ -27,8 +32,13 @@
 }
 
 .modal-reservation__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
 }
 
@@ -45,6 +55,38 @@
     color: var(--main-color);
     font-weight: 400;
     font-size: 16px;
+}
+
+.modal-reservation__input::-webkit-input-placeholder {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.38462;
+    letter-spacing: 0.03em;
+    color: var(--primery-color);
+}
+
+.modal-reservation__input::-moz-placeholder {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.38462;
+    letter-spacing: 0.03em;
+    color: var(--primery-color);
+}
+
+.modal-reservation__input:-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.38462;
+    letter-spacing: 0.03em;
+    color: var(--primery-color);
+}
+
+.modal-reservation__input::-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.38462;
+    letter-spacing: 0.03em;
+    color: var(--primery-color);
 }
 
 .modal-reservation__input::placeholder {
@@ -64,6 +106,11 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
+    -webkit-transition:
+        color var(--transition-time),
+        background-color var(--transition-time),
+        outline var(--transition-time),
+        border-radius var(--transition-time);
     transition:
         color var(--transition-time),
         background-color var(--transition-time),
