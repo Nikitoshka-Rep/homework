@@ -4,7 +4,7 @@
     margin-top: -2px;
     background-color: var(--bg-secondary-color);
     overflow-x: hidden;
-    /* z-index: var(--layer-negative); */
+    z-index: var(--layer-negative);
 }
 
 .halls__container {
