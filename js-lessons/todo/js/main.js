@@ -1,56 +1,69 @@
 "use strict";
 
-const todos = [];
+const formElement = document.querySelector(".form");
+const inputElement = document.querySelector(".input");
+const todosElement = document.querySelector(".todos");
 
-const todoKyes = {
+const todoKeys = {
     id: "id",
     text: "text",
     is_completed: "is_completed",
 };
 
-const errTodoNotFound = todoId => `Todo with id ${todoId} not found`
+const todos = [];
+
+const errTodoNotFound = (todoId) => `Todo with id ${todoId} not found`;
 
 const getNewTodoId = (todos) =>
-    todos.reduce((maxId, todo) => Math.max(maxId, todo[todoKyes.id]), 0) + 1;
+    todos.reduce((maxId, todo) => Math.max(maxId, todo[todoKeys.id]), 0) + 1;
 
 const createTodo = (todos, text) => {
     const newTodo = {
-        [todoKyes.id]: getNewTodoId(todos),
-        [todoKyes.text]: text,
-        [todoKyes.is_completed]: false,
+        [todoKeys.id]: getNewTodoId(todos),
+        [todoKeys.text]: text,
+        [todoKeys.is_completed]: false,
     };
     todos.push(newTodo);
     return newTodo;
 };
 
 const completeTodoById = (todos, todoId) => {
-    const todo = todos.find((todo) => todo[todoKyes.id] === todoId);
+    const todo = todos.find((todo) => todo[todoKeys.id] === todoId);
+
     if (!todo) {
-        console.error(errTodoNotFound (todoId));
+        console.error(errTodoNotFound(todoId));
         return null;
     }
-    todo[todoKyes.is_completed] = !todo[todoKyes.is_completed];
+    todo[todoKeys.is_completed] = !todo[todoKeys.is_completed];
     return todo;
 };
 
 const deleteTodoById = (todos, todoId) => {
-    const todoIndex = todos.findIndex((todo) => todo[todoKyes.id] === todoId);
+    const todoIndex = todos.findIndex((todo) => todo[todoKeys.id] === todoId);
     if (todoIndex === -1) {
-        console.error(errTodoNotFound (todoId));
+        console.error(errTodoNotFound(todoId));
         return todos;
     }
-    todos.splice(todoIndex, 1)
-    return todos
+    todos.splice(todoIndex, 1);
+    return todos;
 };
 
-const editTodoById = (todos,todoId, text) =>{
-    const todo = todos.find((todo) => todo[todoKyes.id] === todoId);
-    if (!todo) {
-        console.error(errTodoNotFound (todoId));
-        return null;
-    }
-    todo[todoKyes.text] = text || ''
-    return todo
+const createTodoElement = (text) => {
+    const todoElement = document.createElement("li");
+    todoElement.classList.add("todo");
+    todoElement.innerHTML = `
+      <div class="todo-text">${text}</div>
+          <div class="todo-actions">
+        <button class="button-complete button">&#10004;</button>
+        <button class="button-delete button">&#10006;</button>
+      </div>
+    `;
+    todosElement.append(todoElement)
+};
+
+const handleCreateTodo = (todos, text) =>{
+    createTodo(todos,text)
+    createTodoElement(text)
 }
 
-
+handleCreateTodo(todos,"продать почку")
