@@ -1,28 +1,13 @@
-export default class HeaderFixed {
-  constructor(config) {
-    this.headerTypes = config;
-    this.header = document.querySelector(`.${this.headerTypes.HEADER}`);
+const header = document.querySelector('header')
 
-    if (!this.header) {
-      throw new Error("Header element is missing.");
-    }
 
-    this.initEvents();
-  }
-
-  initEvents() {
-    window.addEventListener("scroll", this.updateFixedClass.bind(this));
-  }
-
-  updateFixedClass() {
-    if (window.scrollY > 0) {
-      this.header.classList.add(this.headerTypes.HEADER_FIXED);
-    } else {
-      this.header.classList.remove(this.headerTypes.HEADER_FIXED);
-    }
-  }
-
-  removeFixedClass() {
-    this.header.classList.remove(this.headerTypes.HEADER_FIXED);
-  }
+export const headerFixed = () =>{
+    window.addEventListener('scroll', () =>{
+      if(window.scrollY > 0){
+        header.classList.add('header--fixed')
+      }else{
+        header.classList.remove('header--fixed')
+      }
+    })
 }
+

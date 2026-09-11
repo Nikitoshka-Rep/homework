@@ -90,8 +90,6 @@
                         </button>
                         <button
                             class="header__burger burger"
-                            aria-expanded="false"
-                            aria-controls="header__menu"
                             aria-label="Открыть меню"
                         >
                             <svg width="24" height="24">
@@ -293,7 +291,7 @@
                             аксессуаром, но и ценным дополнением вашей
                             коллекции, Nike Air Mag — идеальный выбор.
                         </p>
-                        <p class="product__price title-sm">36 490 ₽</p>
+                        <p class="product__price title-sm"></p>
                         <div class="product__sizes-wrapper">
                             <section class="product__sizes">
                                 <h4
@@ -305,61 +303,12 @@
                                     class="product__sizes-list"
                                     data-sizes="list"
                                 >
-                                    <button
-                                        class="product__sizes-button"
-                                        aria-label="выбрать размер"
-                                        title="выбрать размер"
-                                        data-sizes="button"
-                                    >
-                                        38
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        aria-label="выбрать размер"
-                                        title="выбрать размер"
-                                        data-sizes="button"
-                                    >
-                                        40
-                                    </button>
-                                    <button
-                                        class="product__sizes-button product__sizes-button--active"
-                                        aria-label="выбрать размер"
-                                        title="выбрать размер"
-                                        data-sizes="button"
-                                    >
-                                        41
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        aria-label="выбрать размер"
-                                        title="выбрать размер"
-                                        data-sizes="button"
-                                    >
-                                        42
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        aria-label="выбрать размер"
-                                        title="выбрать размер"
-                                        data-sizes="button"
-                                    >
-                                        44
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        aria-label="выбрать размер"
-                                        title="выбрать размер"
-                                        data-sizes="button"
-                                    >
-                                        45
-                                    </button>
                                 </div>
 
                                 <div class="product__buy-wrapper">
                                     <button
                                         class="product__buy-button"
                                         data-modal-button="buy"
-                                        data-modal-speed="500"
                                     >
                                         Купить в 1 клик
                                     </button>
@@ -368,7 +317,6 @@
                                         aria-label="Добавить корзину"
                                         title="Добавить корзину"
                                         data-modal-button="cart"
-                                        data-modal-speed="300"
                                     >
                                         <img
                                             src="./icons/cart-icon.svg"
@@ -386,37 +334,8 @@
                                 >
                                     Размеры под заказ
                                 </h4>
-                                <div class="product__sizes-list">
-                                    <button
-                                        class="product__sizes-button"
-                                        disabled
-                                    >
-                                        36
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        disabled
-                                    >
-                                        37
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        disabled
-                                    >
-                                        43
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        disabled
-                                    >
-                                        46
-                                    </button>
-                                    <button
-                                        class="product__sizes-button"
-                                        disabled
-                                    >
-                                        47
-                                    </button>
+                                <div class="product__sizes-list" data-sizes="to-order">
+                                    
                                 </div>
                                 <a href="#" class="pruduct__sizes-order-link"
                                     >Заказать размер</a
